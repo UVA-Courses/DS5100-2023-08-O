@@ -1,0 +1,24 @@
+# Schedule
+
+| Week | Day | Date | Topic | Assessments |
+|-----|-----|------|-------|-------------|
+| 01 | Mon | 07/17 | [M01 Getting Started](../m01/m01-intro.qmd) |  |
+| 02 | Tue | 07/18 | [M02 Introducing Python](../m02/m02-intro.qmd) |  |
+| 03 | Wed | 07/19 | [M03 Control Structures](../m03/m03-intro.qmd) |  |
+| 04 | Thu | 07/20 | [M04 Functions](../m04/m04-intro.qmd) |  |
+| 05 | Fri | 07/21 | Review Day |  |
+| 06 | Mon | 07/24 | [M05 NumPy](../m05/m05-intro.qmd) |  |
+| 07 | Tue | 07/25 | [M06 Pandas](../m06/m06-intro.qmd) |  |
+| 08 | Wed | 07/26 | [M06 Pandas, continued](../m06/m06-intro.qmd)  |  |
+| 09 | Thu | 07/27 | [M07 Classes](../m07/m07-intro.qmd)  |  |
+| 10 | Fri | 07/28 | [M08 Testing](../m08/m08-intro.qmd)  |  |
+| 11 | Mon | 07/31 | [M09 Modules and Packages](../m09/m09-intro.qmd) |  |
+| 12 | Tue | 08/01 | [M10 Basic R](../m10/m10-intro.qmd) |  |
+| 13 | Wed | 08/02 | [M11 Dplyr](../m11/m11-intro.qmd) |  |
+| 14 | Thu | 08/03 | Final Projects  |  |
+| 15 | Fri | 08/04 | Review Day  |  |
+| 16 | Mon | 08/07 | [M12 Visualization](../m12/m12-intro.qmd)  |  |
+| 17 | Tue | 08/08 | [M13 Agile](../m13/m13-intro.qmd)  |  |
+| 18 | Wed | 08/09 | Projects  |  |
+| 19 | Thu | 08/10 | Projects  |  |
+| 20 | Fri | 08/11 | Final Exam |  |

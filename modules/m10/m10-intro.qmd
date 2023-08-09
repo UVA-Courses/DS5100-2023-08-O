@@ -1,0 +1,19 @@
+# M10 Basic R
+
+## Topics
+- Present R basics — syntax, data types, and operators
+- Present R data structures – vectors, lists, matrices, and data frames
+- Create a function in R, and use it in a program
+
+## Readings 
+
+### Required
+<ul>
+<li><a target="_new" href="https://www.w3schools.com/r/default.asp">W3Schools R Tutorial</a></li>
+<li><a target="_new" href="https://www.w3schools.com/r/r_vectors.asp">W3Schools R Data Structures</a></li>
+</ul>
+
+### Optional
+<ul>
+<li><a target="_new" href="http://www.r-tutor.com/r-introduction">Yau, R Tutorial, "R Introduction"</a><span>&nbsp;</span>&larr; Super concise</li>
+</ul>

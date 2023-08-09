@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.262">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>m06-challenge</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="M06-Challenge_files/libs/clipboard/clipboard.min.js"></script>
+<script src="M06-Challenge_files/libs/quarto-html/quarto.js"></script>
+<script src="M06-Challenge_files/libs/quarto-html/popper.min.js"></script>
+<script src="M06-Challenge_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="M06-Challenge_files/libs/quarto-html/anchor.min.js"></script>
+<link href="M06-Challenge_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="M06-Challenge_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="M06-Challenge_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="M06-Challenge_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="M06-Challenge_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="challenge-wine-reviews" class="level1">
+<h1>Challenge: Wine Reviews</h1>
+</section>
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<p>Using the CSV file <code>winereviews.csv</code> that is bundled with this notebook, perform the following functions. Use this file to write your code.</p>
+<p>When you are finished, upload the following items to Collab: * <strong>This file</strong> with your completed code inserted. * <strong>The SQLite database</strong> you created, containing the raw imported CSV file and the tables that implement your normalized schema. * <strong>An image file</strong> of the data model. * <strong>A flask application file</strong> (e.g.&nbsp;<code>winereviews.app</code>), if you decided to complete that task.</p>
+</section>
+<section id="convert-csv-to-sqlite" class="level1">
+<h1>Convert CSV to SQLite</h1>
+<p>Use the Python libraries <code>sqlite3</code> and <code>pandas</code> to convert the CSV file on disk to a database table. Name your database file <code>winereviews.db</code>.</p>
+<div class="cell" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">'./data/winereviews.db'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'./data/winereviews.csv'</span>, index_col<span class="op">=</span><span class="st">'id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>raw.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>points</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>129971.000000</td>
+      <td>120975.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>88.447138</td>
+      <td>35.363389</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.039730</td>
+      <td>41.022218</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>80.000000</td>
+      <td>4.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>86.000000</td>
+      <td>17.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>88.000000</td>
+      <td>25.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>91.000000</td>
+      <td>42.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>3300.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>raw.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>country</th>
+      <th>description</th>
+      <th>designation</th>
+      <th>points</th>
+      <th>price</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th>taster_name</th>
+      <th>taster_twitter_handle</th>
+      <th>title</th>
+      <th>variety</th>
+      <th>winery</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Italy</td>
+      <td>Aromas include tropical fruit, broom, brimston...</td>
+      <td>Vulkà Bianco</td>
+      <td>87</td>
+      <td>NaN</td>
+      <td>Sicily &amp; Sardinia</td>
+      <td>Etna</td>
+      <td>NaN</td>
+      <td>Kerin O’Keefe</td>
+      <td>@kerinokeefe</td>
+      <td>Nicosia 2013 Vulkà Bianco  (Etna)</td>
+      <td>White Blend</td>
+      <td>Nicosia</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Portugal</td>
+      <td>This is ripe and fruity, a wine that is smooth...</td>
+      <td>Avidagos</td>
+      <td>87</td>
+      <td>15.0</td>
+      <td>Douro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Roger Voss</td>
+      <td>@vossroger</td>
+      <td>Quinta dos Avidagos 2011 Avidagos Red (Douro)</td>
+      <td>Portuguese Red</td>
+      <td>Quinta dos Avidagos</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>US</td>
+      <td>Tart and snappy, the flavors of lime flesh and...</td>
+      <td>NaN</td>
+      <td>87</td>
+      <td>14.0</td>
+      <td>Oregon</td>
+      <td>Willamette Valley</td>
+      <td>Willamette Valley</td>
+      <td>Paul Gregutt</td>
+      <td>@paulgwine</td>
+      <td>Rainstorm 2013 Pinot Gris (Willamette Valley)</td>
+      <td>Pinot Gris</td>
+      <td>Rainstorm</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>US</td>
+      <td>Pineapple rind, lemon pith and orange blossom ...</td>
+      <td>Reserve Late Harvest</td>
+      <td>87</td>
+      <td>13.0</td>
+      <td>Michigan</td>
+      <td>Lake Michigan Shore</td>
+      <td>NaN</td>
+      <td>Alexander Peartree</td>
+      <td>NaN</td>
+      <td>St. Julian 2013 Reserve Late Harvest Riesling ...</td>
+      <td>Riesling</td>
+      <td>St. Julian</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>US</td>
+      <td>Much like the regular bottling from 2012, this...</td>
+      <td>Vintner's Reserve Wild Child Block</td>
+      <td>87</td>
+      <td>65.0</td>
+      <td>Oregon</td>
+      <td>Willamette Valley</td>
+      <td>Willamette Valley</td>
+      <td>Paul Gregutt</td>
+      <td>@paulgwine</td>
+      <td>Sweet Cheeks 2012 Vintner's Reserve Wild Child...</td>
+      <td>Pinot Noir</td>
+      <td>Sweet Cheeks</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>raw.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>country                     63
+description                  0
+designation              37465
+points                       0
+price                     8996
+province                    63
+region_1                 21247
+region_2                 79460
+taster_name              26244
+taster_twitter_handle    31213
+title                        0
+variety                      1
+winery                       0
+dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>raw.loc[raw.taster_name.isna(), <span class="st">'taster_name'</span>] <span class="op">=</span> <span class="st">'Anonymous'</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>raw.loc[raw.taster_name <span class="op">==</span> <span class="st">'Anonymous'</span>, <span class="st">'taster_twitter_handle'</span>] <span class="op">=</span> <span class="st">'Unkown'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>raw.value_counts(<span class="st">'taster_name'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>taster_name
+Anonymous             26244
+Roger Voss            25514
+Michael Schachner     15134
+Kerin O’Keefe         10776
+Virginie Boone         9537
+Paul Gregutt           9532
+Matt Kettmann          6332
+Joe Czerwinski         5147
+Sean P. Sullivan       4966
+Anna Lee C. Iijima     4415
+Jim Gordon             4177
+Anne Krebiehl&nbsp;MW       3685
+Lauren Buzzeo          1835
+Susan Kostrzewa        1085
+Mike DeSimone           514
+Jeff Jenssen            491
+Alexander Peartree      415
+Carrie Dykes            139
+Fiona Adams              27
+Christina Pickard         6
+dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>raw.drop_duplicates().shape, raw.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>((119988, 13), (129971, 13))</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>raw <span class="op">=</span> raw.drop_duplicates()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>raw.to_sql(<span class="st">'review_raw'</span>, db, if_exists<span class="op">=</span><span class="st">'replace'</span>, index<span class="op">=</span><span class="va">True</span>) <span class="co"># Don't really have to do this</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>119988</code></pre>
+</div>
+</div>
+</section>
+<section id="identify-the-entities" class="level1">
+<h1>Identify the entities</h1>
+<p>Using our intuition, we view the table and identify the implied subjects, or entities, in the data.</p>
+<ul>
+<li>REVIEW</li>
+<li>TASTER</li>
+<li>WINE</li>
+<li>PLACE</li>
+<li>COUNTRY</li>
+</ul>
+</section>
+<section id="create-tables-for-each-of-the-entities" class="level1">
+<h1>Create tables for each of the entities</h1>
+<p>Using the techniques described in class and in the Jupyter notebooks, create the tables corresponding to your normalized schema.</p>
+<section id="create-taster" class="level2">
+<h2 class="anchored" data-anchor-id="create-taster">Create <code>taster</code></h2>
+<p>Note how we handle <code>NULL</code>s here. We don’t replace them right away, since we want to make sure we don’t include in our table a row with two empty values. That is, even though there are records in <code>review_raw</code> that do not have <code>taster_name</code> values, this does not mean that we want to include in <code>taster</code> a row with no values.</p>
+<div class="cell" data-tags="[]" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>taster <span class="op">=</span> raw[[<span class="st">'taster_name'</span>, <span class="st">'taster_twitter_handle'</span>]].value_counts().to_frame(<span class="st">'n_reviews'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>taster <span class="op">=</span> taster.reset_index().set_index(<span class="st">'taster_name'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>taster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>taster_twitter_handle</th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>taster_name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Anonymous</th>
+      <td>Unkown</td>
+      <td>24917</td>
+    </tr>
+    <tr>
+      <th>Roger Voss</th>
+      <td>@vossroger</td>
+      <td>23560</td>
+    </tr>
+    <tr>
+      <th>Michael Schachner</th>
+      <td>@wineschach</td>
+      <td>14046</td>
+    </tr>
+    <tr>
+      <th>Kerin O’Keefe</th>
+      <td>@kerinokeefe</td>
+      <td>9697</td>
+    </tr>
+    <tr>
+      <th>Paul Gregutt</th>
+      <td>@paulgwine</td>
+      <td>8868</td>
+    </tr>
+    <tr>
+      <th>Virginie Boone</th>
+      <td>@vboone</td>
+      <td>8708</td>
+    </tr>
+    <tr>
+      <th>Matt Kettmann</th>
+      <td>@mattkettmann</td>
+      <td>5730</td>
+    </tr>
+    <tr>
+      <th>Joe Czerwinski</th>
+      <td>@JoeCz</td>
+      <td>4766</td>
+    </tr>
+    <tr>
+      <th>Sean P. Sullivan</th>
+      <td>@wawinereport</td>
+      <td>4461</td>
+    </tr>
+    <tr>
+      <th>Jim Gordon</th>
+      <td>@gordone_cellars</td>
+      <td>3766</td>
+    </tr>
+    <tr>
+      <th>Anne Krebiehl&nbsp;MW</th>
+      <td>@AnneInVino</td>
+      <td>3290</td>
+    </tr>
+    <tr>
+      <th>Lauren Buzzeo</th>
+      <td>@laurbuzz</td>
+      <td>1700</td>
+    </tr>
+    <tr>
+      <th>Susan Kostrzewa</th>
+      <td>@suskostrzewa</td>
+      <td>1023</td>
+    </tr>
+    <tr>
+      <th>Mike DeSimone</th>
+      <td>@worldwineguys</td>
+      <td>461</td>
+    </tr>
+    <tr>
+      <th>Jeff Jenssen</th>
+      <td>@worldwineguys</td>
+      <td>436</td>
+    </tr>
+    <tr>
+      <th>Fiona Adams</th>
+      <td>@bkfiona</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>Christina Pickard</th>
+      <td>@winewchristina</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>taster.to_sql(<span class="st">'taster'</span>, db, if_exists<span class="op">=</span><span class="st">'replace'</span>, index<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>17</code></pre>
+</div>
+</div>
+</section>
+<section id="create-wine" class="level2">
+<h2 class="anchored" data-anchor-id="create-wine">Create <code>wine</code></h2>
+<p>Note that in this phase of the operation, we need to pull data from the wine entity as well as the keys from dependent tables.</p>
+<div class="cell" data-tags="[]" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>wine_cols <span class="op">=</span> <span class="st">'title winery variety designation country province region_1 region_2'</span>.split()</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>wine <span class="op">=</span> raw[wine_cols].value_counts().to_frame(<span class="st">'n_reviews'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>wine <span class="op">=</span> wine.reset_index().set_index([<span class="st">'title'</span>,<span class="st">'winery'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note that we have some duplicates in the index. This is not good. In a real project, we’d remove these.</p>
+<div class="cell" data-tags="[]" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>wine.loc[wine.index.duplicated()]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>variety</th>
+      <th>designation</th>
+      <th>country</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th>winery</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cooper-Garrod 2011 Test Pilot Red (Santa Cruz Mountains)</th>
+      <th>Cooper-Garrod</th>
+      <td>Bordeaux-style Red Blend</td>
+      <td>Test Pilot</td>
+      <td>US</td>
+      <td>California</td>
+      <td>Santa Cruz Mountains</td>
+      <td>Central Coast</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Ascension Cellars 2015 Silver White (Paso Robles)</th>
+      <th>Ascension Cellars</th>
+      <td>White Blend</td>
+      <td>Silver</td>
+      <td>US</td>
+      <td>California</td>
+      <td>Paso Robles</td>
+      <td>Central Coast</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Force Majeure 2014 Parabellum Red (Red Mountain)</th>
+      <th>Force Majeure</th>
+      <td>Bordeaux-style Red Blend</td>
+      <td>Parabellum</td>
+      <td>US</td>
+      <td>Washington</td>
+      <td>Red Mountain</td>
+      <td>Columbia Valley</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>wine.loc[<span class="st">'Force Majeure 2014 Parabellum Red (Red Mountain)'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>variety</th>
+      <th>designation</th>
+      <th>country</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>winery</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Force Majeure</th>
+      <td>Rhône-style Red Blend</td>
+      <td>Parabellum</td>
+      <td>US</td>
+      <td>Washington</td>
+      <td>Red Mountain</td>
+      <td>Columbia Valley</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Force Majeure</th>
+      <td>Bordeaux-style Red Blend</td>
+      <td>Parabellum</td>
+      <td>US</td>
+      <td>Washington</td>
+      <td>Red Mountain</td>
+      <td>Columbia Valley</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>wine.to_sql(<span class="st">'wine'</span>, con<span class="op">=</span>db, if_exists<span class="op">=</span><span class="st">'replace'</span>, index<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>31538</code></pre>
+</div>
+</div>
+</section>
+<section id="create-place" class="level2">
+<h2 class="anchored" data-anchor-id="create-place">Create <code>place</code></h2>
+<div class="cell" data-tags="[]" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>place_cols <span class="op">=</span> <span class="st">'country province region_1 region_2'</span>.split()</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>place <span class="op">=</span> raw[place_cols].value_counts().to_frame(<span class="st">'n_reviews'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>place</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="11" valign="top">US</th>
+      <th>California</th>
+      <th>Napa Valley</th>
+      <th>Napa</th>
+      <td>4174</td>
+    </tr>
+    <tr>
+      <th>Washington</th>
+      <th>Columbia Valley (WA)</th>
+      <th>Columbia Valley</th>
+      <td>3795</td>
+    </tr>
+    <tr>
+      <th rowspan="9" valign="top">California</th>
+      <th>Russian River Valley</th>
+      <th>Sonoma</th>
+      <td>2862</td>
+    </tr>
+    <tr>
+      <th>California</th>
+      <th>California Other</th>
+      <td>2468</td>
+    </tr>
+    <tr>
+      <th>Paso Robles</th>
+      <th>Central Coast</th>
+      <td>2155</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Sonoma-Napa-Monterey</th>
+      <th>California Other</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Sonoma-Napa-Mendocino</th>
+      <th>North Coast</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Sonoma-Napa-Lake</th>
+      <th>North Coast</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Sonoma County-Santa Barbara County</th>
+      <th>California Other</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Lake-Sonoma-Napa</th>
+      <th>North Coast</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>203 rows × 1 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>place.to_sql(<span class="st">'place'</span>, db, if_exists<span class="op">=</span><span class="st">'replace'</span>, index<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<pre><code>203</code></pre>
+</div>
+</div>
+</section>
+<section id="create-country" class="level2">
+<h2 class="anchored" data-anchor-id="create-country">Create <code>country</code>*</h2>
+<p>This is not part of a our model. But I show this to prove a point – that in the process of implementing a model, you might discover another</p>
+<div class="cell" data-tags="[]" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> raw.country.value_counts().to_frame(<span class="st">'n_reviews'</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>country.index.name <span class="op">=</span> <span class="st">'country_id'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>country</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>country_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>US</th>
+      <td>50457</td>
+    </tr>
+    <tr>
+      <th>France</th>
+      <td>20353</td>
+    </tr>
+    <tr>
+      <th>Italy</th>
+      <td>17940</td>
+    </tr>
+    <tr>
+      <th>Spain</th>
+      <td>6116</td>
+    </tr>
+    <tr>
+      <th>Portugal</th>
+      <td>5256</td>
+    </tr>
+    <tr>
+      <th>Chile</th>
+      <td>4184</td>
+    </tr>
+    <tr>
+      <th>Argentina</th>
+      <td>3544</td>
+    </tr>
+    <tr>
+      <th>Austria</th>
+      <td>3034</td>
+    </tr>
+    <tr>
+      <th>Australia</th>
+      <td>2197</td>
+    </tr>
+    <tr>
+      <th>Germany</th>
+      <td>1992</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>1301</td>
+    </tr>
+    <tr>
+      <th>New Zealand</th>
+      <td>1278</td>
+    </tr>
+    <tr>
+      <th>Israel</th>
+      <td>466</td>
+    </tr>
+    <tr>
+      <th>Greece</th>
+      <td>432</td>
+    </tr>
+    <tr>
+      <th>Canada</th>
+      <td>226</td>
+    </tr>
+    <tr>
+      <th>Bulgaria</th>
+      <td>132</td>
+    </tr>
+    <tr>
+      <th>Hungary</th>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>Romania</th>
+      <td>102</td>
+    </tr>
+    <tr>
+      <th>Uruguay</th>
+      <td>98</td>
+    </tr>
+    <tr>
+      <th>Turkey</th>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>Slovenia</th>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>Georgia</th>
+      <td>76</td>
+    </tr>
+    <tr>
+      <th>Croatia</th>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>Mexico</th>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>England</th>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>Moldova</th>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>Brazil</th>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>Lebanon</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>Morocco</th>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>Peru</th>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>Ukraine</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>Czech Republic</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Macedonia</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Cyprus</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>Serbia</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>India</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Switzerland</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Luxembourg</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Bosnia and Herzegovina</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Armenia</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Slovakia</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>China</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Egypt</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>country.to_sql(<span class="st">'country'</span>, db, if_exists<span class="op">=</span><span class="st">'replace'</span>, index<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<pre><code>43</code></pre>
+</div>
+</div>
+</section>
+<section id="create-review" class="level2">
+<h2 class="anchored" data-anchor-id="create-review">Create <code>review</code></h2>
+<div class="cell" data-tags="[]" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>review_idx_cols <span class="op">=</span> [<span class="st">'title'</span>,<span class="st">'winery'</span>,<span class="st">'taster_name'</span>]</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>review_cols <span class="op">=</span> [<span class="st">'description'</span>,<span class="st">'taster_name'</span>,<span class="st">'points'</span>,<span class="st">'price'</span>,<span class="st">'title'</span>,<span class="st">'winery'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>review <span class="op">=</span> raw[review_cols].copy().set_index(review_idx_cols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>review</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>description</th>
+      <th>points</th>
+      <th>price</th>
+    </tr>
+    <tr>
+      <th>title</th>
+      <th>winery</th>
+      <th>taster_name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nicosia 2013 Vulkà Bianco  (Etna)</th>
+      <th>Nicosia</th>
+      <th>Kerin O’Keefe</th>
+      <td>Aromas include tropical fruit, broom, brimston...</td>
+      <td>87</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Quinta dos Avidagos 2011 Avidagos Red (Douro)</th>
+      <th>Quinta dos Avidagos</th>
+      <th>Roger Voss</th>
+      <td>This is ripe and fruity, a wine that is smooth...</td>
+      <td>87</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>Rainstorm 2013 Pinot Gris (Willamette Valley)</th>
+      <th>Rainstorm</th>
+      <th>Paul Gregutt</th>
+      <td>Tart and snappy, the flavors of lime flesh and...</td>
+      <td>87</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>St. Julian 2013 Reserve Late Harvest Riesling (Lake Michigan Shore)</th>
+      <th>St. Julian</th>
+      <th>Alexander Peartree</th>
+      <td>Pineapple rind, lemon pith and orange blossom ...</td>
+      <td>87</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>Sweet Cheeks 2012 Vintner's Reserve Wild Child Block Pinot Noir (Willamette Valley)</th>
+      <th>Sweet Cheeks</th>
+      <th>Paul Gregutt</th>
+      <td>Much like the regular bottling from 2012, this...</td>
+      <td>87</td>
+      <td>65.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Dr. H. Thanisch (Erben Müller-Burggraef) 2013 Brauneberger Juffer-Sonnenuhr Spätlese Riesling (Mosel)</th>
+      <th>Dr. H. Thanisch (Erben Müller-Burggraef)</th>
+      <th>Anna Lee C. Iijima</th>
+      <td>Notes of honeysuckle and cantaloupe sweeten th...</td>
+      <td>90</td>
+      <td>28.0</td>
+    </tr>
+    <tr>
+      <th>Citation 2004 Pinot Noir (Oregon)</th>
+      <th>Citation</th>
+      <th>Paul Gregutt</th>
+      <td>Citation is given as much as a decade of bottl...</td>
+      <td>90</td>
+      <td>75.0</td>
+    </tr>
+    <tr>
+      <th>Domaine Gresser 2013 Kritt Gewurztraminer (Alsace)</th>
+      <th>Domaine Gresser</th>
+      <th>Roger Voss</th>
+      <td>Well-drained gravel soil gives this wine its c...</td>
+      <td>90</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>Domaine Marcel Deiss 2012 Pinot Gris (Alsace)</th>
+      <th>Domaine Marcel Deiss</th>
+      <th>Roger Voss</th>
+      <td>A dry style of Pinot Gris, this is crisp with ...</td>
+      <td>90</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <th>Domaine Schoffit 2012 Lieu-dit Harth Cuvée Caroline Gewurztraminer (Alsace)</th>
+      <th>Domaine Schoffit</th>
+      <th>Roger Voss</th>
+      <td>Big, rich and off-dry, this is powered by inte...</td>
+      <td>90</td>
+      <td>21.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>119988 rows × 3 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>review.to_sql(<span class="st">'review'</span>, db, if_exists<span class="op">=</span><span class="st">'replace'</span>, index<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>119988</code></pre>
+</div>
+</div>
+<p><strong>Question:</strong> Why is <code>price</code> a field in <code>review</code> and not <code>wine</code>?</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

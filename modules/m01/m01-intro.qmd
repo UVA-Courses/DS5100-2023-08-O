@@ -1,0 +1,17 @@
+# M01 Getting Started
+
+## Topics
+
+* Introduce the course
+* Access Rivanna
+* Explore the Unix command line
+* Explore use of Git and GitHub
+
+## Outcomes
+
+* Become familiar with UVA's compute resources Rivanna
+* Become familiar with the command line, e.g. bash
+* Know the difference between Git and GitHub
+* Know how to fork and clone a repository for personal use
+* Know how to push content to a repository that you own
+* Know how to make a pull request to a repository that you don't own

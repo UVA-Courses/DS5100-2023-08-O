@@ -1,0 +1,14 @@
+# M06 Pandas
+
+## Topics
+- Introduce Pandas and its relationship to NumPy
+- Understand difference between Series and DataFrames
+- Understand role of indexes in Pandas
+- Review fundamental methods in Pandas
+
+## Readings
+
+### Required
+
+* [McKinney 2017, Chapter 5: Getting Started with Pandas](https://learning.oreilly.com/library/view/python-for-data/9781491957653/ch05.html)
+* [Getting Started in Pandas (Official)](https://pandas.pydata.org/docs/getting_started/index.html#getting-started)

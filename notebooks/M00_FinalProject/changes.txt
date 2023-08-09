@@ -1,0 +1,6 @@
+
+Die class weight change method now can raise ValueError or TypeError.
+
+Scenario 1, Task 4: Now asks for raw frequency, i.e. count.
+
+Scenario 3, Task 4 added (was there then removed somehow.)

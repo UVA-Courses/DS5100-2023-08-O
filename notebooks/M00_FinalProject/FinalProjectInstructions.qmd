@@ -1,0 +1,401 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Final Project
+
+DS 5100 \| Summer 2023 \| Residential
+
+# Overview
+
+For your Final Project, you will write, test, use, package, and publish
+a Python module and accompanying files.
+
+The module will implement a simple [Monte Carlo
+simulator](https://en.wikipedia.org/wiki/Monte_Carlo_method) using a set
+of three related classes --- a Die class, a Game class, and an Analyzer
+class.
+
+The classes are related in the following way: Game objects are
+initialized with a Die object, and Analyzer objects are initialized with
+a Game object.
+
+```{mermaid}
+flowchart LR
+  A[Die] --> B[Game] --> C[Analyzer]
+```
+
+In this simulator, a "die" can be any discrete random variable
+associated with a stochastic process, such as using a deck of card,
+flipping a coin, rolling an actual die, or speaking a language.
+
+The project is designed to integrate what you have learned in this class
+by calling upon the following areas of knowledge:
+
+-   Basic syntax, expressions, and statements in Python.
+-   Python Classes with initialization methods.
+-   Data manipulation with NumPy and Pandas.
+-   Literate programming with docstrings and documentation.
+-   Unit testing with Unittest.
+-   Simple plotting with Pandas.
+-   Program modularization and packaging with Setuptools.
+-   GitHub for managing and sharing code.
+
+# Class Definitions
+
+The following class definitions provide blueprints for creating the
+classes for your simulator. Note that although these provide some
+specific instructions, some elements of your code are left to your
+interpretation.
+
+## The Die class
+
+### **General Definition**
+
+-   A die has $N$ sides, or "faces", and $W$ weights, and can be rolled
+    to select a face.
+
+    -   For example, a "die" with $N = 2$ is a coin, and a one with
+        $N = 6$ is a standard die.
+
+    -   Normally, dice and coins are "fair," meaning that the each side
+        has an equal weight. An unfair die is one where the weights are
+        unequal.
+
+-   Each side contains a unique symbol. Symbols may be all alphabetic or
+    all numeric.
+
+-   $W$ defaults to $1.0$ for each face but can be changed after the
+    object is created.
+
+-   The weights are just numbers, not a normalized probability
+    distribution.
+
+-   The die has one behavior, which is to be rolled one or more times.
+
+### **Specific Methods and Attributes**
+
+**An initializer**.
+
+-   Takes a NumPy array of faces as an argument. Throws a `TypeError` if
+    not a NumPy array.
+
+-   The array's data type (`dtype`) may be strings or numbers.
+
+-   The array's values must be distinct. Tests to see if the values are
+    distinct and raises a `ValueError` if not.
+
+-   Internally initializes the weights to $1.0$ for each face.
+
+-   Saves both faces and weights in a private data frame with faces in
+    the index.
+
+**A method to change the weight of a single side.**
+
+-   Takes two arguments: the face value to be changed and the new
+    weight.
+
+-   Checks to see if the face passed is valid value, i.e. if it is in
+    the die array. If not, raises an `IndexError`.
+
+-   Checks to see if the weight is a valid type, i.e. if it is numeric
+    (integer or float) or castable as numeric. If not, raises a
+    `TypeError`.
+
+**A method to roll the die one or more times.**
+
+-   Takes a parameter of how many times the die is to be rolled;
+    defaults to $1$.
+
+-   This is essentially a random sample with replacement, from the
+    private die data frame, that applies the weights.
+
+-   Returns a Python list of outcomes.
+
+-   Does not store internally these results.
+
+**A method to show the die's current state.**
+
+-   Returns a copy of the private die data frame.
+
+## The Game class
+
+### General Definition
+
+-   A game consists of rolling of one or more similar dice (Die objects)
+    one or more times.
+
+-   By similar dice, we mean that each die in a given game has the same
+    number of sides and associated faces, but each die object may have
+    its own weights.
+
+-   Each game is initialized with a Python list that contains one or
+    more dice.
+
+-   Game objects have a behavior to play a game, i.e. to roll all of the
+    dice a given number of times.
+
+-   Game objects only keep the results of their most recent play.
+
+### Specific Methods and Attributes
+
+**An initializer**.
+
+-   Takes a single parameter, a list of already instantiated similar
+    dice.
+
+-   Ideally this would check if the list actually contains Die objects
+    and that they all have the same faces, but this is not required for
+    this project.
+
+**A play method.**
+
+-   Takes an integer parameter to specify how many times the dice should
+    be rolled.
+
+-   Saves the result of the play to a private data frame.
+
+-   The data frame should be in wide format, i.e. have the roll number
+    as a named index, columns for each die number (using its list index
+    as the column name), and the face rolled in that instance in each
+    cell.
+
+**A method to show the user the results of the most recent play.**
+
+-   This method just returns a copy of the private play data frame to
+    the user.
+
+-   Takes a parameter to return the data frame in narrow or wide form
+    which defaults to wide form.
+
+-   The narrow form will have a `MultiIndex`, comprising the roll number
+    and the die number (in that order), and a single column with the
+    outcomes (i.e. the face rolled).
+
+-   This method should raise a `ValueError` if the user passes an
+    invalid option for narrow or wide.
+
+## The Analyzer class
+
+### General Definition
+
+An Analyzer object takes the results of a single game and computes
+various descriptive statistical properties about it.
+
+### Specific Methods and Attributes
+
+**An initializer**.
+
+-   Takes a game object as its input parameter. Throw a `ValueError` if
+    the passed value is not a Game object.
+
+**A jackpot method.**
+
+-   A jackpot is a result in which all faces are the same, e.g. all ones
+    for a six-sided die.
+
+-   Computes how many times the game resulted in a jackpot.
+
+-   Returns an integer for the number of jackpots.
+
+**A face counts per roll method.**
+
+-   Computes how many times a given face is rolled in each event.
+
+    -   For example, if a roll of five dice has all sixes, then the
+        counts for this roll would be $5$ for the face value '6' and $0$
+        for the other faces.
+
+-   Returns a data frame of results.
+
+-   The data frame has an index of the roll number, face values as
+    columns, and count values in the cells (i.e. it is in wide format)..
+
+**A combo count method.**
+
+-   Computes the distinct combinations of faces rolled, along with their
+    counts.
+
+-   Combinations are order-independent and may contain repetitions.
+
+-   Returns a data frame of results.
+
+-   The data frame should have an MultiIndex of distinct combinations
+    and a column for the associated counts.
+
+**An permutation count method.**
+
+-   Computes the distinct permutations of faces rolled, along with their
+    counts.
+
+-   Permutations are order-dependent and may contain repetitions.
+
+-   Returns a data frame of results.
+
+-   The data frame should have an MultiIndex of distinct permutations
+    and a column for the associated counts.
+
+## General Requirements for Classes
+
+-   All classes and methods must have appropriate docstrings.
+
+-   Class docstrings should describe the general purpose of the class.
+
+-   Method docstrings should describe the purpose of the method, any
+    input arguments, any return values if applicable, and any changes to
+    the object's state that the user should know about.
+
+-   Input argument descriptions should describe data types and formats
+    as well as any default values.
+
+-   You may use language included in this document to create these
+    docstrings.
+
+# Unit Tests
+
+Write a unit test file using the Unittest package containing **at least
+one method for each method in each of the three classes** above. As a
+general rule, each test method should verify that the target method
+creates an appropriate data structure.
+
+# Scenarios
+
+To demonstrate the use of your simulator, you will produce a Jupyter
+Notebook that performs the following scenarios, each consisting of a set
+of tasks:
+
+## Scenario 1: A 2-headed Coin
+
+1.  Create a fair coin (with faces $H$ and $T$) and one unfair coin in
+    which one of the faces has a weight of $5$ and the others $1$.
+
+2.  Play a game of $1000$ flips with two fair dice.
+
+3.  Play another game (using a new Game object) of $1000$ flips, this
+    time using two unfair dice and one fair die. For the second unfair
+    die, you can use the same die object twice in the list of dice you
+    pass to the Game object.
+
+4.  For each game, use an Analyzer object to determine the raw frequency
+    of jackpots --- i.e. getting either all $H$s or all $T$s.
+
+5.  For each analyzer, compute relative frequency as the number of
+    jackpots over the total number of rolls.
+
+6.  Show your results, comparing the two relative frequencies, in a
+    simple bar chart.
+
+## Scenario 2: A 6-sided Die
+
+1.  Create three dice, each with six sides having the faces $1$ through
+    $6$.
+
+2.  Convert one die to an unfair one by weighting the face $6$ five
+    times more than the other weights (i.e. it has weight of $5$ and the
+    others a weight of $1$ each).
+
+3.  Convert another die to be unfair by weighting the face $1$ five
+    times more than the others.
+
+4.  Play a game of $10000$ rolls with $5$ fair dice.
+
+5.  Play a game of $10000$ rolls with $2$ unfair dice, one as defined in
+    steps #2 and #3 respectively, and $3$ fair dice.
+
+6.  For each game, use an Analyzer object to determine the relative
+    frequency of jackpots and show your results, comparing the two
+    relative frequencies, in a simple bar chart.
+
+7.  ~~Also compute~~ $10$ ~~most frequent combinations of faces for each
+    game.~~
+
+8.  ~~Plot each of these combination results as bar charts.~~
+
+## Scenario 3: Letters of the Alphabet
+
+1.  Create a "die" of letters from $A$ to $Z$ with weights based on
+    their frequency of usage as found in the data file
+    `english_letters.txt`. Use the frequencies (i.e. raw counts) as
+    weights.
+
+2.  Play a game involving $4$ of these dice with $1000$ rolls.
+
+3.  Determine wow many distinct permutations in your results are actual
+    English words, based on the vocabulary found in
+    `scrabble_words.txt`.
+
+4.  Repeat steps #2 and #3 using $5$ dice and compare the results. Which
+    word length generates a higher percentage of English words?
+
+# Submission
+
+Details for submission will be provided in Canvas.
+
+# About the README file
+
+The `README.md` file will be your the main source of documentation for
+your users, in addition to your use of docstrings in your code. The file
+should consist of the following sections:
+
+-   **Metadata**: Specify your name and the project name (i.e. Monte
+    Carlo Simulator).
+
+-   **Synopsis:** Show brief demo code of how the classes are used, i.e.
+    code snippets showing how to install, import, and use the code
+    to (1) create dice, (2) play a game, and (3) analyze a game. You can
+    use preformatted blocks for the code.
+
+-   **API description**: A list of all classes with their public methods
+    and attributes. Each item should show their docstrings. All
+    parameters (with data types and defaults) should be described. All
+    return values should be described. Do not describe private methods
+    and attributes.
+
+# Collaboration
+
+You may work in groups to discuss idea and approaches, but all
+deliverables must be yours.
+
+# Deliverables
+
+To complete the project, you will create the following deliverables:
+
+\_\_ A `Die` Class.
+
+\_\_ A `Game` Class.
+
+\_\_ An `Analyzer` Class.
+
+\_\_ A module file named `montecarlo.py` that contains the above three
+classes.
+
+\_\_ Unit tests for each method in each class stored in a file named
+`montecarlo_test.py`.
+
+\_\_ A text file containing the succsessful results of running the
+previous test file named `montecarlo_test_results.txt`.
+
+\_\_ A scenario script that instantiates the classes in a Jupyter
+notebook called `montecarlo_demo.ipynb`. NOTE: This file can be the
+notebook template provided.
+
+\_\_ `docstring`s for each class and method (including the
+initializers).
+
+\_\_ The appropriate files and directories in a project directory to
+distribute the above code, including a package subdirectoy called
+`montecarlo` with the module file inside of it.
+
+\_\_ A private GitHub repo called `<user_id>_ds5100_montecarlo` that
+contains the package and is shared with the professor and grader.
+
+\_\_ A `README.md` file that describes for a new user the purpose of the
+package and how to use it.
+
+\_\_ A license file, such as the MIT license.
+
+\_\_ A `.gitignore` file for Python projects.
+
+\_\_ Everything named properly when names are specified.
