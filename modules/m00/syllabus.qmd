@@ -4,10 +4,9 @@
 
 Welcome to DS 5100 Programming for Data Science! In this course, we will develop skills in Python and R Programming, as well as the command line and GitHub. The objective of the course is to introduce essential programming concepts, structures, and techniques from a data science perspective. You will gain confidence in not only reading code, but learning what it means to write good quality code. Additionally, essential and complementary topics are taught, such as testing and debugging, exception handling, and an introduction to visualization.
 
-
 ### The Data Science Perspective 
 
-Learning to code from the data science perspective means that we will emphasize the role that code plays in working with the **data pipeline** that underlies nearly everything that a data scientist does, from acquiring data from a variety of sources to cleaning and reshaping it for exploration, analysis, and modeling, to visualizing and interpreting it for the world to understand. At each phase of this process, data are transformed through the medium of code, and so we will always being thinking of a programming language as a data processing language. The meaning of this will become clearer as the course progresses.
+Learning to code from the data science perspective means that we will emphasize the role that code plays in working with the **data pipeline** that underlies nearly everything that a data scientist does, from acquiring data from a variety of sources to cleaning and reshaping it for exploration, analysis, and modeling, to visualizing and interpreting it for the world to understand. At each phase of this process, data are transformed through the medium of code, and so we will always be thinking of a programming language as a data processing language. The meaning of this will become clearer as the course progresses.
 
 ### Code Fluency
 
@@ -111,7 +110,10 @@ Typically, homework assignments that involve Jupyter Notebooks will be submitted
 
 Please submit HW assignments on time.
 
-If an issue will prompt late submission, email the TA in advance to explain the situation.
+::: {.callout-note}
+If an issue will prompt late submission, please submit a formal request to [this form](request_form_url). 
+Requests are not guaranteed to be granted; the default timeframe for completion is generous.
+:::
 
 If the HW is submitted late and it is not an excused lateness, 10% of the assignment total points will be deducted per day it is late.
 
@@ -120,6 +122,10 @@ If the HW is submitted late and it is not an excused lateness, 10% of the assign
 During each class there will be activities in which you will write code to demonstrate and extend your knowledge. These may be guided activities or peer-programming exercises. Each of these are designed to exemplify the concepts conveyed in reading and lecture. 
 
 Although the results of this work are not graded, you will be graded on your effort to complete them. This will count toward your participation grade. 
+
+::: {.callout-important}
+Please submit these as soon after the class meeting as possible. They are meant to provide evidence of your participation in class; submitting them late defeatst that purpose.
+:::
 
 ### Quizzes
 
