@@ -110,11 +110,6 @@ Typically, homework assignments that involve Jupyter Notebooks will be submitted
 
 Please submit HW assignments on time.
 
-::: {.callout-note}
-If an issue will prompt late submission, please submit a formal request to [this form](request_form_url). 
-Requests are not guaranteed to be granted; the default timeframe for completion is generous.
-:::
-
 If the HW is submitted late and it is not an excused lateness, 10% of the assignment total points will be deducted per day it is late.
 
 ### In-Class Activities
@@ -122,10 +117,6 @@ If the HW is submitted late and it is not an excused lateness, 10% of the assign
 During each class there will be activities in which you will write code to demonstrate and extend your knowledge. These may be guided activities or peer-programming exercises. Each of these are designed to exemplify the concepts conveyed in reading and lecture. 
 
 Although the results of this work are not graded, you will be graded on your effort to complete them. This will count toward your participation grade. 
-
-::: {.callout-important}
-Please submit these as soon after the class meeting as possible. They are meant to provide evidence of your participation in class; submitting them late defeatst that purpose.
-:::
 
 ### Quizzes
 
@@ -137,9 +128,15 @@ Although they can be completed in less time, you have one hour to finish and sub
 
 The quizzes should be done closed book: please do not consult any resources including notes, books, the web, devices, or other external media.
 
-::: {.callout-warning}
-Making up missed quizzes is not advised &mdash; their timing is part of their value. However, if you know in advance that you will miss any of the scheduled quizzes, you must make arrangements in advance with the instructor. At least one week in advance if possible, or as soon as you are able if an unforeseen event occurs preventing you from taking the quiz.
-:::
+
+### Requests for Extensions
+
+In cases where circumstances prevent you from completing your homework assignments on time, please submit a formal request to [this form](request_form_url). Requests are not guaranteed to be granted; the default timeframe for completion is generous.
+
+Note that extensions are typically not granted for participation assignments. They are meant to provide evidence of your participation in class; submitting them late defeatst that purpose.
+
+Also, making up missed quizzes is not advised &mdash; their timing is part of their value. 
+
 
 ### Course Project
 
