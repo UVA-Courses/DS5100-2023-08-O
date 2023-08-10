@@ -53,7 +53,7 @@
     "href": "modules/m00/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nDate\nTopic\nAssignments\n\n\n\n\n01\n08/22\nM01 Getting Started\n\n\n\n02\n08/29\nM02 Introducing Python\n\n\n\n03\n09/05\nM03 Control Structures\n\n\n\n04\n09/12\nM04 Functions\n\n\n\n05\n09/19\nM05 NumPy\n\n\n\n06\n09/26\nM06 Pandas\n\n\n\n07\n10/03\nM07 Classes\n\n\n\n08\n10/10\nReading Days\n\n\n\n09\n10/17\nM08 Testing\n\n\n\n10\n10/24\nM09 Modules and Packages\n\n\n\n11\n10/31\nM10 Basic R\n\n\n\n12\n11/07\nElection Day\n\n\n\n13\n11/14\nM11 Dplyr\n\n\n\n14\n11/21\nThanksgiving\n\n\n\n15\n11/28\nM12 Visualization\n\n\n\n16\n12/05\nM13 Agile\n\n\n\n17\n12/12\nFinal Exam"
+    "text": "Week\nDate\nTopic\nAssignments\n\n\n\n\n01\n08/22\nM01 Getting Started\nP Q H\n\n\n02\n08/29\nM02 Introducing Python\nP Q H\n\n\n03\n09/05\nM03 Control Structures\nP Q H\n\n\n04\n09/12\nM04 Functions\nP Q H\n\n\n05\n09/19\nM05 NumPy\nP Q H\n\n\n06\n09/26\nM06 Pandas\nP Q H\n\n\n07\n10/03\nM07 Classes\nP Q H\n\n\n08\n10/10\nReading Days\n\n\n\n09\n10/17\nM08 Testing\nP Q H\n\n\n10\n10/24\nM09 Modules and Packages\nP Q H\n\n\n11\n10/31\nM10 Basic R\nP Q H\n\n\n12\n11/07\nElection Day\n\n\n\n13\n11/14\nM11 Dplyr\nP Q H\n\n\n14\n11/21\nThanksgiving\n\n\n\n15\n11/28\nM12 Visualization\nP\n\n\n16\n12/05\nM13 Agile\nP FP\n\n\n17\n12/12\nFinal Exam\n\n\n\n\n\n\n\nKey\nValue\n\n\n\n\nP\nParticipation\n\n\nQ\nQuiz\n\n\nH\nHomework\n\n\nFP\nFinal Project"
   },
   {
     "objectID": "modules/m01/m01-intro.html#topics",
