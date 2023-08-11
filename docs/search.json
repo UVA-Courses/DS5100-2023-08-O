@@ -182,13 +182,6 @@
     "text": "After reading the previous documents on Rivanna and Unix, try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.\nTo get started, go to OpenOnDemand Dashboard page and from the main menu select Clusters → Rivanna Shell Access.\nThis should open a terminal to what is called the “shell” of the operating system.\n\n\n\nScreenshot of Rivanna shell\n\n\nRivanna uses Linux, a member of the Unix family of operating systems. Many cloud resources use Linux.\nUnderstanding how to do work from the command line on such systems is an essential skill of the data scientist.\nIf you have never used the command line, have no fear! Just enter the commands exactly as shown and ask questions in the Teams chat if you are stuck.\nNow, create a directory for your course and this course by entering the following commands:\ncd Documents \nmdkir MSDS \ncd MSDS \nmkdir DS5100 \ncd DS5100\nIf the Documents directory does not exist, create that first using the mkdir command.\n\ncd means “change directory,” and is a basic Unix command.\nmkdir means “make directory.” It’s also a basic Unix command.\n\nNote that you can use the tab key to complete path and command names as you type.\nYou don’t have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.\nMore information about Unix shell commands can be found the document Unix Shell Commands."
   },
   {
-    "objectID": "modules/m01/m01-which-python.html",
-    "href": "modules/m01/m01-which-python.html",
-    "title": "Which Python?",
-    "section": "",
-    "text": "Once you are in Rivanna, you will want to know which version of Python you have installed as the default.\nTo find out, from the command line type:\nwhich python\nThis will show you the “path” to a python interpreter. If you do not see “anaconda” in that path, run the following command:\nmodule load anaconda\nThis will update your environment to use Anaconda’s distribution of Python.\nAfter running the command, enter the command to see which pythion is being used to confirm that it is the one from Ancaconda.\nNote that you can use module to run other programs on your Rivanna account.\nType module list to see which programs have already been installed on your account.\nType module spider to see all the programs you can install."
-  },
-  {
     "objectID": "modules/m01/m01-activity-github.html#introduction",
     "href": "modules/m01/m01-activity-github.html#introduction",
     "title": "Activity: Using Git and GitHub",
@@ -252,11 +245,25 @@
     "text": "Python is organized into a hierarchy of object types. Sometimes, these are just call types.\nObjects are the basic unit out of which the language is constructed.\nWe’ll learn about objects later – what they are and how to create your own – but for now just understand that they have two main things associated with them:\n\nFirst, they can contain data.\nSecond, they can have behaviors, frequently in relation to the data they contain.\n\nData types and data structures are kinds of objects."
   },
   {
+    "objectID": "modules/m02/m02-activity-hello-world.html#which-python",
+    "href": "modules/m02/m02-activity-hello-world.html#which-python",
+    "title": "Activity: Hello, World!",
+    "section": "Which Python?",
+    "text": "Which Python?\nOnce you are in Rivanna, you will want to know which version of Python you have installed as the default.\nTo find out, from the command line type:\nwhich python\nThis will show you the “path” to a python interpreter. For example:\n\nIf you do not see “anaconda” in that path, then run the following command:\nmodule load anaconda\nThis will update your environment to use Anaconda’s distribution of Python.\nAfter running the command, enter the command to see which pythion is being used to confirm that it is the one from Ancaconda."
+  },
+  {
+    "objectID": "modules/m02/m02-activity-hello-world.html#aside",
+    "href": "modules/m02/m02-activity-hello-world.html#aside",
+    "title": "Activity: Hello, World!",
+    "section": "Aside",
+    "text": "Aside\nNote that you can use module to run other programs on your Rivanna account.\nType module list to see which programs have already been installed on your account.\nType module spider to see all the programs you can install."
+  },
+  {
     "objectID": "modules/m02/m02-activity-hello-world.html#the-python-interactive-shell",
     "href": "modules/m02/m02-activity-hello-world.html#the-python-interactive-shell",
     "title": "Activity: Hello, World!",
     "section": "The Python Interactive Shell",
-    "text": "The Python Interactive Shell\nLog onto the Rivanna shell and move into in the course directory you created for this class.\nFrom the command line, enter python\nYou should get the Python Shell:\n\nThis is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.\nMake sure you see that you are using version 3 of Python.\nIf you see Python 2, exit the shell by entering quit() and try again by entering python3 at the command line.\nAt the >>> prompt type print(\"Hello, World!\") and press return.\nIf you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)"
+    "text": "The Python Interactive Shell\nFrom the command line, enter python\nYou should get the Python Shell:\n\nThis is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.\nMake sure you see that you are using version 3 of Python.\nIf you see Python 2, exit the shell by entering quit() and try again by entering python3 at the command line.\nAt the >>> prompt type print(\"Hello, World!\") and press return.\nIf you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)"
   },
   {
     "objectID": "modules/m02/m02-activity-hello-world.html#try-this",

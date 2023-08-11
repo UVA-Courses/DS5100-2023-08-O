@@ -31,7 +31,6 @@ book:
         - topics/setting-up-ssh.qmd
         - topics/git-and-github.qmd
         - modules/m01/m01-using-rivanna.qmd
-        - modules/m01/m01-which-python.qmd
         - modules/m01/m01-activity-github.qmd
     - part: modules/m02/m02-intro.qmd # "02 Introducing Python"
       chapters:

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science - 12&nbsp; Activity: Hello, World!</title>
+<title>DS 5100: Programming for Data Science - 11&nbsp; Activity: Hello, World!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -232,11 +232,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../modules/m01/m01-using-rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Activity: Using Rivanna</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../modules/m01/m01-which-python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Which Python?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -655,7 +650,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-python-interactive-shell" id="toc-the-python-interactive-shell" class="nav-link active" data-scroll-target="#the-python-interactive-shell">The Python Interactive Shell</a></li>
+  <li><a href="#which-python" id="toc-which-python" class="nav-link active" data-scroll-target="#which-python">Which Python?</a></li>
+  <li><a href="#aside" id="toc-aside" class="nav-link" data-scroll-target="#aside">Aside</a></li>
+  <li><a href="#the-python-interactive-shell" id="toc-the-python-interactive-shell" class="nav-link" data-scroll-target="#the-python-interactive-shell">The Python Interactive Shell</a></li>
   <li><a href="#try-this" id="toc-try-this" class="nav-link" data-scroll-target="#try-this">Try <code>this</code></a></li>
   <li><a href="#running-python-files" id="toc-running-python-files" class="nav-link" data-scroll-target="#running-python-files">Running Python Files</a></li>
   </ul>
@@ -681,9 +678,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<p>In this activity, you will run Python from the command line and become acquainted with its most basic mode of operation.</p>
+<p>To get started, log onto the Rivanna shell and move into in the course directory you created for this class.</p>
+<section id="which-python" class="level2">
+<h2 class="anchored" data-anchor-id="which-python">Which Python?</h2>
+<p>Once you are in Rivanna, you will want to know which version of Python you have installed as the default.</p>
+<p>To find out, from the command line type:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will show you the “path” to a python interpreter. For example:</p>
+<p><img src="../../media/which-python.png" class="img-fluid"></p>
+<p>If you do not see “anaconda” in that path, then run the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load anaconda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will update your environment to use Anaconda’s distribution of Python.</p>
+<p>After running the command, enter the command to see which pythion is being used to confirm that it is the one from Ancaconda.</p>
+</section>
+<section id="aside" class="level2">
+<h2 class="anchored" data-anchor-id="aside">Aside</h2>
+<p>Note that you can use <code>module</code> to run other programs on your Rivanna account.</p>
+<p>Type <code>module list</code> to see which programs have already been installed on your account.</p>
+<p>Type <code>module spider</code> to see all the programs you can install.</p>
+</section>
 <section id="the-python-interactive-shell" class="level2">
 <h2 class="anchored" data-anchor-id="the-python-interactive-shell">The Python Interactive Shell</h2>
-<p>Log onto the Rivanna shell and move into in the course directory you created for this class.</p>
 <p>From the command line, enter python</p>
 <p>You should get the Python Shell:</p>
 <p><img src="../../media/python-prompt.png" class="img-fluid"></p>
@@ -696,7 +712,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="try-this" class="level2">
 <h2 class="anchored" data-anchor-id="try-this">Try <code>this</code></h2>
 <p>Now, enter following line at the prompt and press return:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> this</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>What do you see?</p>
 <p>To exit the Python Shell, enter <code>quit()</code> or <code>exit()</code> and hit return.</p>
 </section>
