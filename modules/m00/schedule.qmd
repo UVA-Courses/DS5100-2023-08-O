@@ -22,7 +22,7 @@
 
 | Key | Value |
 |-----|-------|
-| P | Participation |
-| Q | Quiz |
-| H | Homework |
+| P  | Participation |
+| Q  | Quiz |
+| H  | Homework |
 | FP | Final Project | 
