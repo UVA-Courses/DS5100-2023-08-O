@@ -1,5 +1,5 @@
 project:
-  title: "DS 5100: Programming for Data Science"
+  title: "{{< var site_title >}}"
   type: book
   output-dir: docs
 
@@ -7,8 +7,8 @@ execute:
   freeze: true
   
 book:
-  title: "DS 5100: Programming for Data Science"
-  subtitle: "{{< var academic_term >}}"
+  title: "{{< var course_num >}}: {{< var course_title >}} | {{< var academic_term >}} | {{< var cohort_type >}}"
+  # subtitle: "{{< var academic_term >}} | {{< var cohort_type >}}"
   author: "Rafael C. Alvarado"
   date: "08/09/2023"
   page-navigation: true
