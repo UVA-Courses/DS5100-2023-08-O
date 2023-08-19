@@ -1,6 +1,6 @@
 # Activity: Using Rivanna
 
-After reading the previous documents on [Rivanna](../../topics/rivanna.qmd) and [Unix](../../topics/unix.qmd), try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA. 
+After reading the previous documents on [Rivanna](../../topics/rivanna.qmd) and [Unix](../../topics/unix.qmd), try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.
 
 To get started, go to [OpenOnDemand Dashboard page](https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard) and from the main menu select Clusters → Rivanna Shell Access.
 
@@ -16,7 +16,7 @@ If you have never used the command line, have no fear! Just enter the commands e
 
 **Now, create a directory for your course and this course by entering the following commands:**
 
-```
+```         
 cd Documents 
 mdkir MSDS 
 cd MSDS 
@@ -24,10 +24,10 @@ mkdir DS5100
 cd DS5100
 ```
 
-If the `Documents` directory does not exist, create that first using the mkdir command. 
+If the `Documents` directory does not exist, create that first using the mkdir command.
 
-* `cd`  means "change directory," and is a basic Unix command.
-* `mkdir` means "make directory." It's also a basic Unix command.
+-   `cd` means "change directory," and is a basic Unix command.
+-   `mkdir` means "make directory." It's also a basic Unix command.
 
 Note that you can use the tab key to complete path and command names as you type.
 

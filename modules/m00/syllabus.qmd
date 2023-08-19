@@ -175,16 +175,16 @@ Final Exam     20%
 
 We follow the 3-4-3 model of grading. That is, within each letter range, the $+$ and $-$ each span 3 values ($[0,1,2]$ and $[7,8,9]$ respectively), whereas the neutral grade spans the middle 4 values ($[3,4,5,6]$).
 
-Note that it is by convention that we treat $0$ in the $1$s place as standing for the initial value of a grade span, which leads to the anomaly of the `A` range having $11$ values, since it includes both $90$ and $100$. Past experience shows that treating $90$ as a `B+` is considered an outrage by students, so we accept the weirdness :-)
+Note that it is by convention that we treat $0$ in the $1$s place as standing for the initial value of a grade span, which leads to the anomaly of the `A` range having $11$ values, since it includes both $90$ and $100$. Past experience shows that treating $90$ as a `B+` is considered an outrage by students, so we accept the weirdness :-) We also give `A` a four point range since, otherwise, `A+` would have it, which does not seem fair. 
 
 ```
 Grade     Min  Max
-A+        97 - 100
-A         93 - 96
+A+        98 - 100
+A         93 - 97 
 A-        90 - 92
 B+        87 - 89
 B         83 - 86
-B-        80 - 82 &#8592; minimum passing grade
+B-        80 - 82 <--- minimum passing grade
 ----------------- 
 C+        77 - 79
 C         73 - 76

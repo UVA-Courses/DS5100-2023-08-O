@@ -803,14 +803,14 @@ Final Exam     20%
 <section id="scale" class="level3">
 <h3 class="anchored" data-anchor-id="scale">Scale</h3>
 <p>We follow the 3-4-3 model of grading. That is, within each letter range, the <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> each span 3 values (<span class="math inline">\([0,1,2]\)</span> and <span class="math inline">\([7,8,9]\)</span> respectively), whereas the neutral grade spans the middle 4 values (<span class="math inline">\([3,4,5,6]\)</span>).</p>
-<p>Note that it is by convention that we treat <span class="math inline">\(0\)</span> in the <span class="math inline">\(1\)</span>s place as standing for the initial value of a grade span, which leads to the anomaly of the <code>A</code> range having <span class="math inline">\(11\)</span> values, since it includes both <span class="math inline">\(90\)</span> and <span class="math inline">\(100\)</span>. Past experience shows that treating <span class="math inline">\(90\)</span> as a <code>B+</code> is considered an outrage by students, so we accept the weirdness :-)</p>
+<p>Note that it is by convention that we treat <span class="math inline">\(0\)</span> in the <span class="math inline">\(1\)</span>s place as standing for the initial value of a grade span, which leads to the anomaly of the <code>A</code> range having <span class="math inline">\(11\)</span> values, since it includes both <span class="math inline">\(90\)</span> and <span class="math inline">\(100\)</span>. Past experience shows that treating <span class="math inline">\(90\)</span> as a <code>B+</code> is considered an outrage by students, so we accept the weirdness :-) We also give <code>A</code> a four point range since, otherwise, <code>A+</code> would have it, which does not seem fair.</p>
 <pre><code>Grade     Min  Max
-A+        97 - 100
-A         93 - 96
+A+        98 - 100
+A         93 - 97 
 A-        90 - 92
 B+        87 - 89
 B         83 - 86
-B-        80 - 82 &amp;#8592; minimum passing grade
+B-        80 - 82 &lt;--- minimum passing grade
 ----------------- 
 C+        77 - 79
 C         73 - 76
