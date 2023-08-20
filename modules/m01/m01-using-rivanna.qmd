@@ -37,4 +37,4 @@ More information about Unix shell commands can be found the document [Unix Shell
 
 ## Video Walkthrough
 
-<iframe style="width: 608px; height: 450px;" title="DS 5100 M01 01 Rivanna and Unix (v2)" src="https://canvas.its.virginia.edu/courses/75059/external_tools/retrieve?display=borderless&amp;resource_link_lookup_uuid=58bc8fad-e6fb-4f7e-915a-98a3398e268d" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *; autoplay *; clipboard-write *; display-capture *"></iframe>
+See [Canvas](https://canvas.its.virginia.edu/courses/75059/pages/m01-videos?module_item_id=820048) for videos.
