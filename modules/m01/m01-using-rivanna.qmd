@@ -35,6 +35,7 @@ You don't have to, but it would be a good idea to create subdirectories for any 
 
 More information about Unix shell commands can be found the document [Unix Shell Commands](../../topics/unix.qmd).
 
-## Video Walkthrough
 
-See [Canvas](https://canvas.its.virginia.edu/courses/75059/pages/m01-videos?module_item_id=820048) for videos.
+::: {.callout-note}
+See [video](https://canvas.its.virginia.edu/courses/75059/modules/items/821801) on Canvas.
+:::
