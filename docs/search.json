@@ -70,13 +70,6 @@
     "text": "Topics\n\nIntroduce the course\nAccess Rivanna\nExplore the Unix command line\nExplore use of Git and GitHub"
   },
   {
-    "objectID": "modules/m01/m01-intro.html#outcomes",
-    "href": "modules/m01/m01-intro.html#outcomes",
-    "title": "M01 Getting Started",
-    "section": "Outcomes",
-    "text": "Outcomes\n\nBecome familiar with UVA’s compute resources Rivanna\nBecome familiar with the command line, e.g. bash\nKnow the difference between Git and GitHub\nKnow how to fork and clone a repository for personal use\nKnow how to push content to a repository that you own\nKnow how to make a pull request to a repository that you don’t own"
-  },
-  {
     "objectID": "topics/rivanna.html#introduction",
     "href": "topics/rivanna.html#introduction",
     "title": "About Rivanna",
@@ -102,7 +95,7 @@
     "href": "topics/rivanna.html#for-more-information",
     "title": "About Rivanna",
     "section": "For More Information",
-    "text": "For More Information\nUVA’s Research Computing unit provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:\n\nIntroduction to Rivanna\nUsing Rivanna from the Command Line"
+    "text": "For More Information\nUVA’s Research Computing unit provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:\n\nIntroduction to Rivanna\nUsing Rivanna from the Command Line\n\n\n\n\n\n\n\nNote\n\n\n\nSee video on Canvas."
   },
   {
     "objectID": "topics/unix.html#introduction",
@@ -137,7 +130,7 @@
     "href": "topics/unix.html#command-line-cool",
     "title": "Using Unix",
     "section": "Command Line Cool",
-    "text": "Command Line Cool\nAlthough we will not be using the command line to this degree, you should know that it is a powerful environment for doing data science work. The book Data Science from the Command Line makes the case for using the command line to perform many tasks that we often perform with more resource intensive (i.e. bloated) tools such as Python and R.  At some point in your early DS career, you may want to look at this. The book itself is also a great introduction to data science!\n\nOne last thing – for fun you may want to read Neal Stephenson’s “In the Beginning Was The Command Line”, a kind of cyberpunk history of the topic. Stephenson, by the way, is the author who coined the term “metaverse” in the novel Snowcrash."
+    "text": "Command Line Cool\nAlthough we will not be using the command line to this degree, you should know that it is a powerful environment for doing data science work. The book Data Science from the Command Line makes the case for using the command line to perform many tasks that we often perform with more resource intensive (i.e. bloated) tools such as Python and R.  At some point in your early DS career, you may want to look at this. The book itself is also a great introduction to data science!\n\nOne last thing – for fun you may want to read Neal Stephenson’s “In the Beginning Was The Command Line”, a kind of cyberpunk history of the topic. Stephenson, by the way, is the author who coined the term “metaverse” in the novel Snowcrash.\n\n\n\n\n\n\nNote\n\n\n\nSee video on Canvas."
   },
   {
     "objectID": "topics/setting-up-ssh.html#overview",
@@ -182,11 +175,11 @@
     "text": "To Learn More\n\nVideos\nBook\n\n\n\n\n\n\n\nNote\n\n\n\nSee video on Canvas."
   },
   {
-    "objectID": "modules/m01/m01-using-rivanna.html#video-walkthrough",
-    "href": "modules/m01/m01-using-rivanna.html#video-walkthrough",
+    "objectID": "modules/m01/m01-using-rivanna.html",
+    "href": "modules/m01/m01-using-rivanna.html",
     "title": "Activity: Using Rivanna",
-    "section": "Video Walkthrough",
-    "text": "Video Walkthrough\nSee Canvas for videos."
+    "section": "",
+    "text": "After reading the previous documents on Rivanna and Unix, try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.\nTo get started, go to OpenOnDemand Dashboard page and from the main menu select Clusters → Rivanna Shell Access.\nThis should open a terminal to what is called the “shell” of the operating system.\n\n\n\nScreenshot of Rivanna shell\n\n\nRivanna uses Linux, a member of the Unix family of operating systems. Many cloud resources use Linux.\nUnderstanding how to do work from the command line on such systems is an essential skill of the data scientist.\nIf you have never used the command line, have no fear! Just enter the commands exactly as shown and ask questions in the Teams chat if you are stuck.\nNow, create a directory for your course and this course by entering the following commands:\ncd Documents \nmdkir MSDS \ncd MSDS \nmkdir DS5100 \ncd DS5100\nIf the Documents directory does not exist, create that first using the mkdir command.\n\ncd means “change directory,” and is a basic Unix command.\nmkdir means “make directory.” It’s also a basic Unix command.\n\nNote that you can use the tab key to complete path and command names as you type.\nYou don’t have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.\nMore information about Unix shell commands can be found the document Unix Shell Commands."
   },
   {
     "objectID": "modules/m01/m01-activity-github.html#introduction",
@@ -207,14 +200,7 @@
     "href": "modules/m02/m02-intro.html#topics",
     "title": "M02 Introducing Python",
     "section": "Topics",
-    "text": "Topics\n\nRunning Python code.\nPython’s basic data types.\nPython’s primary operators associated with each data type.\nPython’s built-in data structures."
-  },
-  {
-    "objectID": "modules/m02/m02-intro.html#outcomes",
-    "href": "modules/m02/m02-intro.html#outcomes",
-    "title": "M02 Introducing Python",
-    "section": "Outcomes",
-    "text": "Outcomes\n\nRun Python from the command line on Rivanna.\nCreate and run a Jupyter Notebook on Rivanna.\nDescribe the difference between data from the perspective of data science versus computer science.\nKnow the primary data types in Python and their basic operators.\nKnow the built-in list-like data structures in Python and the basic methods and functions associated with them."
+    "text": "Topics\n\nRunning Python code\nPython’s basic data types\nPython’s primary operators associated with each data type\nPython’s built-in data structures"
   },
   {
     "objectID": "modules/m02/m02-intro.html#readings",
@@ -606,14 +592,7 @@
     "href": "modules/m03/m03-intro.html#topics",
     "title": "M03 Control Structures",
     "section": "Topics",
-    "text": "Topics\n\nMore on Statements and Syntax\nControl Structures and Loops\nIterators\nComprehensions"
-  },
-  {
-    "objectID": "modules/m03/m03-intro.html#outcomes",
-    "href": "modules/m03/m03-intro.html#outcomes",
-    "title": "M03 Control Structures",
-    "section": "Outcomes",
-    "text": "Outcomes\n\nRecognize primary control structures available in Python and their basic use cases\nWrite comprehensions for each of Python’s list-like data structures\nRecognize when iterators are used by Python functions (such as open())\nUnderstand basic conditional logic statements and their role in designing data flow in a program"
+    "text": "Topics\n\nMore on Statements and Syntax\nControl Structures and Loops\nConditional Logic\nIterators\nComprehensions"
   },
   {
     "objectID": "modules/m03/m03-intro.html#readings",
@@ -726,13 +705,6 @@
     "title": "M04 Functions",
     "section": "Topics",
     "text": "Topics\n\nBuilt-in functions\nUser-defined functions\nVariable scope\nLambda functions\nDesign of functions\nRecursion"
-  },
-  {
-    "objectID": "modules/m04/m04-intro.html#outcomes",
-    "href": "modules/m04/m04-intro.html#outcomes",
-    "title": "M04 Functions",
-    "section": "Outcomes",
-    "text": "Outcomes\n\nBe able to use Pythons native and imported functions\nBe able to write your own functions\nUnderstand concept of variable scope\nBe able to write lambda functions and understand their use cases\nGrasp basic principles of function design\nImplement simple recursion functions"
   },
   {
     "objectID": "modules/m04/m04-intro.html#readings",
@@ -2791,12 +2763,5 @@
     "title": "Refreshing the Course Repo",
     "section": "",
     "text": "Each day you will want to update the forked version of the course repo you created for your homework in Module 01.\nHere are the steps to do that:\nFirst, if you have made any changes to the course notebooks and want to keep your changes, make copies of these files in your private repo.\nSecond, enter the command git stash within your local repo to hide the changes you’ve made to the current branch. To learn more about how to use stash, check out the docs on GitHub. For now, we are just using it clean up the repo so when you pull, you don’t run into a conflict between local and remote changes.\nThird, go to the forked version of the course repo on GitHub and issue a Sync Fork command to refresh the content of your repo with the new course content. The screenshot below shows where this command is located on your repo’s web page:\n\nFourth, go back to your local repo and run git pull. You should now have the most recent content from the course repo."
-  },
-  {
-    "objectID": "modules/m01/m01-using-rivanna.html",
-    "href": "modules/m01/m01-using-rivanna.html",
-    "title": "Activity: Using Rivanna",
-    "section": "",
-    "text": "After reading the previous documents on Rivanna and Unix, try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.\nTo get started, go to OpenOnDemand Dashboard page and from the main menu select Clusters → Rivanna Shell Access.\nThis should open a terminal to what is called the “shell” of the operating system.\n\n\n\nScreenshot of Rivanna shell\n\n\nRivanna uses Linux, a member of the Unix family of operating systems. Many cloud resources use Linux.\nUnderstanding how to do work from the command line on such systems is an essential skill of the data scientist.\nIf you have never used the command line, have no fear! Just enter the commands exactly as shown and ask questions in the Teams chat if you are stuck.\nNow, create a directory for your course and this course by entering the following commands:\ncd Documents \nmdkir MSDS \ncd MSDS \nmkdir DS5100 \ncd DS5100\nIf the Documents directory does not exist, create that first using the mkdir command.\n\ncd means “change directory,” and is a basic Unix command.\nmkdir means “make directory.” It’s also a basic Unix command.\n\nNote that you can use the tab key to complete path and command names as you type.\nYou don’t have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.\nMore information about Unix shell commands can be found the document Unix Shell Commands.\n\n\n\n\n\n\nNote\n\n\n\nSee video on Canvas."
   }
 ]

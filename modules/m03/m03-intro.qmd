@@ -4,15 +4,16 @@
 
 - More on Statements and Syntax
 - Control Structures and Loops 
+- Conditional Logic
 - Iterators
 - Comprehensions
 
-## Outcomes
+<!-- ## Outcomes
 
 - Recognize primary control structures available in Python and their basic use cases
 - Write comprehensions for each of Python's list-like data structures
 - Recognize when iterators are used by Python functions (such as open()) 
-- Understand basic conditional logic statements and their role in designing data flow in a program
+- Understand basic conditional logic statements and their role in designing data flow in a program -->
 
 ## Readings
 

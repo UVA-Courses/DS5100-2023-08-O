@@ -34,8 +34,3 @@ Note that you can use the tab key to complete path and command names as you type
 You don't have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.
 
 More information about Unix shell commands can be found the document [Unix Shell Commands](../../topics/unix.qmd).
-
-
-::: {.callout-note}
-See [video](https://canvas.its.virginia.edu/courses/75059/modules/items/821801) on Canvas.
-:::

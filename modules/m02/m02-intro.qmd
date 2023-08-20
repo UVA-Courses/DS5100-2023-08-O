@@ -2,18 +2,19 @@
 
 ## Topics
 
-* Running Python code.
-* Python's basic data types.
-* Python's primary operators associated with each data type.
-* Python's built-in data structures.
+* Running Python code
+* Python's basic data types
+* Python's primary operators associated with each data type
+* Python's built-in data structures
 
+<!-- 
 ## Outcomes
 
 * Run Python from the command line on Rivanna.
 * Create and run a Jupyter Notebook on Rivanna.
 * Describe the difference between data from the perspective of data science versus computer science.
 * Know the primary data types in Python and their basic operators.
-* Know the built-in list-like data structures in Python and the basic methods and functions associated with them.
+* Know the built-in list-like data structures in Python and the basic methods and functions associated with them. -->
 
 ## Readings
 

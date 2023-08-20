@@ -66,3 +66,7 @@ UVA's Research Computing unit provides resources for learning how to use Rivanna
 
 * Introduction to Rivanna
 * Using Rivanna from the Command Line
+
+::: {.callout-note}
+See [video](https://canvas.its.virginia.edu/courses/75059/modules/items/821826) on Canvas.
+:::

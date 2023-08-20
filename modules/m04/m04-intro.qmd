@@ -8,13 +8,13 @@
 - Design of functions
 - Recursion
 
-## Outcomes
+<!-- ## Outcomes
 - Be able to use Pythons native and imported functions
 - Be able to write your own functions
 - Understand concept of variable scope 
 - Be able to write lambda functions and understand their use cases
 - Grasp basic principles of function design
-- Implement simple recursion functions
+- Implement simple recursion functions -->
 
 ## Readings 
 
