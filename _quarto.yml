@@ -13,9 +13,8 @@ book:
   page-navigation: true
   repo-actions: [edit]
   # downloads: [pdf]
-  # sharing: [twitter, facebook, linkedin]
-  repo-url: "{{< var github_url >}}"
-  # repo-url: https://github.com/ontoligent/DS5100-2023-08-O
+  # repo-url: "{{< var github_url >}}" # DOES NOT WORK
+  repo-url: "https://github.com/ontoligent/DS5100-2023-08-O"
   chapters:
     - part: index.qmd 
       chapters:
