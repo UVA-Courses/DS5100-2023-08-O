@@ -44,6 +44,9 @@ In this diagram, the dashed lines refer to actions performed only once for a giv
 Note also that the here "Remote workstation" may be confusing; it means remote relative to your laptop, e.g. Rivanna, which we sometimes call local relative to the GitHub repo. In any case, note that these two copies of the same repo do not communicate with each other directly, but rather through their common relationship with the GitHub hosted instance of the repo. 
 
 ## To Learn More
+
+The Git website has excellent learning materials. Use the following links to access vides and 
+
 * [Videos](https://git-scm.com/videos)
 * [Book](https://git-scm.com/book/en/v2)
 

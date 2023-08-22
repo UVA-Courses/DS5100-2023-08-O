@@ -2,7 +2,11 @@
 title: "Activity: Using Git and GitHub"
 ---
 
-## Introduction
+::: {.callout}
+
+**Goal:** Use Git and GitHub to put course materials on your Rivanna account.
+
+:::
 
 In this activity, you will go through steps of using Git and GitHub covered in the [the reading on GitHub](../../topics/git-and-github.qmd). You can also draw on the what you learned in the [Technical Orientation](https://github.com/UVADS/orientation-technical). At this point, you also should be able check off the following items:
 
