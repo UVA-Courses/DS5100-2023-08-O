@@ -62,10 +62,10 @@ Find under "Interactive Apps > RStudio Server" in the menu.
 
 ## For More Information
 
-UVA's Research Computing unit provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:
+UVA's [Research Computing Learning Portal](https://learning.rc.virginia.edu/)  provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:
 
-* Introduction to Rivanna
-* Using Rivanna from the Command Line
+* [Introduction to Rivanna](https://learning.rc.virginia.edu/notes/rivanna-intro/)
+* [Using Rivanna from the Command Line](https://learning.rc.virginia.edu/notes/rivanna-command-line/)
 
 ::: {.callout-note}
 See [video](https://canvas.its.virginia.edu/courses/75059/modules/items/821826) on Canvas.
