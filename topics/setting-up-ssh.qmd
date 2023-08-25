@@ -26,7 +26,7 @@
 
 2. Move into your **root directory**. If on a Unix-based system (Rivanna or a Mac), you can do this by entering `cd` by itself.
 
-3. Generate the key.
+3. Generate the key:
 
 - Enter: `ssh-keygen -t ed25519 -C "your_email_id@example.com"`, using your email address.
 - The value `ed25519` is the key type and must not be changed.
@@ -38,7 +38,7 @@
 - Create a memorable sentence.
 - A good passphrase should have at least 15, preferably 20 characters and be difficult to guess. It should contain upper case letters, lower case letters, digits, and preferably at least one punctuation character.
 
-5. Add the key to `ssh-agent`.    
+5. Add the key to `ssh-agent`: 
 
 - Enter: `eval "$(ssh-agent -s)"`
 - Enter: `ssh-add ~/.ssh/id_ed25519`
@@ -47,7 +47,6 @@
 If you are on a Mac and the `ssh-add` command gives an error saying that the file is not found or that you do not have permission, try running the following command then re-running `ssh-add`:
 
 `ls -al`
-
 :::
 
 ::: {.callout-note}
@@ -58,35 +57,34 @@ If you're using macOS Sierra 10.12.2 or later, you will need to modify your `~/.
 
 **On your GitHub account**
 
-Get the public key that was just generated.
+1. Get the public key that was just generated.
 
-1.  Enter: `more ~/.ssh/id_ed25519.pub`
-2.  Copy the result to your clipboard (e.g. by blocking off the line and
+- Enter: `more ~/.ssh/id_ed25519.pub`
+- Copy the result to your clipboard (e.g. by blocking off the line and
     entering Ctrl-C).
-3.  The key should begin `ssh-ed25519` and end with the email address
-    you used in generating the key. In between it will have a long
-    string of alphanumeric characters.
+- The key should begin `ssh-ed25519` and end with the email address you used in generating the key. In between it will have a long string of alphanumeric characters.
 
-On GitHub, go to your account settings and select "SSH and GPG Keys" from the side menu. 
+2. On GitHub, go to your account settings and select "SSH and GPG Keys" from the side menu. 
 
 - A link to your account settings can be found in the drop-down list
     produced by clicking on your user icon in the upper right of the
     website.
 
-Under "SSH keys," press the "New SSH Key" button.
+3. Under "SSH keys," press the "New SSH Key" button.
 
-1.  Add a brief title describing the context of the key, i.e. the local
-    machine where it was generated, e.g. Rivanna.
-2.  Choose "Authentication Key" as the Key type.
-3.  Paste the key into the Key text area.
-4.  Submit the form by pressing "Add SSH key."
+- Add a brief title describing the context of the key, i.e. the local machine where it was generated, e.g. Rivanna.
+- Choose "Authentication Key" as the Key type.
+- Paste the key into the Key text area.
+- Submit the form by pressing "Add SSH key."
 
-You are now good to go. Whenever you clone a site from your GitHub
+**You are now good to go.** Whenever you clone a site from your GitHub
 account, choose the SSH link.
 
 ## Information Sources
 
-The GitHub site has lots of excellent documentation. Here are some pages you may find useful.
+The [GitHub site](https://docs.github.com) has lots of excellent documentation. 
+
+Here are some pages you may find useful:
 
 * [About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * [Generate the key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
