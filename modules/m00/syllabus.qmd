@@ -120,13 +120,17 @@ Although the results of this work are not graded, you will be graded on your eff
 
 ### Quizzes
 
-There will be several quizzes throughout the semester that will assess your knowledge of the various topics. Quizzes are based on the topics and code covered in the readings and activities.
+There will be several quizzes throughout the semester that will assess your knowledge of the various topics. 
+
+Quizzes are based on the topics and code covered in the readings and activities.
 
 All quizzes are mandatory for all students to take.
 
 Although they can be completed in less time, you have one hour to finish and submit your work. 
 
-The quizzes should be done closed book: please do not consult any resources including notes, books, the web, devices, or other external media.
+~~The quizzes should be done closed book: please do not consult any resources including notes, books, the web, devices, or other external media.~~
+
+Quizzes are open book &mdash; you may consult the course videos and reading materials for answers.
 
 
 ### Requests for Extensions
