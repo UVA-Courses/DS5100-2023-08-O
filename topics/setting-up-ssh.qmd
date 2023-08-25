@@ -18,11 +18,11 @@
 
 **On your local machine**
 
-1. Get to the computer from which you will be pushing and pulling to you GitHub repo and get to the command line (i.e. the shell).
+1. Get to the command line on the computer from which you will be pushing and pulling to your GitHub repo.
 
-- If you are on **Rivanna**, you can access this through the [Dashboard](https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna.hpc.virginia.edu) or connect via SSH.
-- If you are on a **Mac**, open Terminal.
-- If you are on **Windows** and you have admin rights, first install `git-bash`. Otherwise follow [this tutorial from Microsoft](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement).
+- If you are using **Rivanna**, you can access this through the [Dashboard](https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna.hpc.virginia.edu) or connect via SSH.
+- If you are using a **Mac**, open Terminal.
+- If you are using **Windows** and you have admin rights, first install `git-bash`. Otherwise follow [this tutorial from Microsoft](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement).
 
 2. Move into your **root directory**. If on a Unix-based system (Rivanna or a Mac), you can do this by entering `cd` by itself.
 
