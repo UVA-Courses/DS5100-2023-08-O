@@ -1,0 +1,37 @@
+a = "notstr"
+print(a[0:3])
+print(a[-3:])
+
+b = [1,2,3]
+print(b[1])
+
+b.append(4)
+print(b)
+
+c = (1,2,3)
+c += (4,)
+print(c)
+
+d = "string"
+e = "beeswax"
+f = "nomenclature"
+
+g = {d, 3, 1}
+print(d in g)
+
+z = {'a': 'apple', 'b': 'beta', 'c': 'charlie'}
+print(z.get('a'))
+y = list(z.keys())
+print(y)
+
+a = "The quick brown fox jumped over the lazy dogs."
+z = "The quick brown fox jumped over the lazy dogs."
+a = a.replace('.','')
+a = a.lower()
+print(a)
+b = a.split()
+c = set(b)
+d = sorted(c)
+print(d)
+
+print(sorted(set(z.replace('.','').lower().split())))
