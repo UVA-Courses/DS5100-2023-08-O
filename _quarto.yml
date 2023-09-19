@@ -17,9 +17,9 @@ book:
   repo-url: "https://github.com/ontoligent/DS5100-2023-08-O"
   chapters:
     - part: index.qmd 
-      chapters:
-        - modules/m00/syllabus.qmd
-        - modules/m00/schedule.qmd
+      # chapters:
+        # - modules/m00/syllabus.qmd
+        # - modules/m00/schedule.qmd
         # - notebooks/M00_FinalProject/FinalProjectInstructions.qmd
         # - notebooks/M00_FinalProject/FinalProjectTemplate.ipynb
     - part: modules/m01/m01-intro.qmd # "01 Getting Started"
