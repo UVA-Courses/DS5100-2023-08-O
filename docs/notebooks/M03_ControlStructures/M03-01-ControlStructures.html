@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science | Fall 2023 | Online - 20&nbsp; NB: Control Structures</title>
+<title>DS 5100: Programming for Data Science | Fall 2023 | Online - 18&nbsp; NB: Control Structures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -161,24 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../index.html" class="sidebar-item-text sidebar-link">Welcome</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../modules/m00/syllabus.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllabus</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../modules/m00/schedule.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Schedule</span></a>
-  </div>
-</li>
-      </ul>
+      <span class="sidebar-item-text sidebar-link text-start">Welcome</span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -702,9 +686,11 @@ Iterates over a iterable object (list, tuple, dict, set, string)</li>
 <section id="indentation" class="level2">
 <h2 class="anchored" data-anchor-id="indentation">Indentation</h2>
 <p>This is where Python differs from most languages. To define control structures,<br>
-and functional blocks of code in general, most languages use either characters like braces <code>{</code> and <code>}</code> or key words like <code>IF ... END IF</code>.</p>
-<p>Python uses tabs – spaces, actually – to signify logical blocks off code.</p>
-<p>It is therefore imperative to understand and get a feel for indentation. For more information, see <a href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch10s03.html">Lutz 2019, “A Tale of Two Ifs.”</a></p>
+and functional blocks of code in general, most languages use either characters<br>
+like braces <code>{</code> and <code>}</code> or key words like <code>IF ... END IF</code>.</p>
+<p>Python uses tabs — spaces, actually — to signify logical blocks off code.</p>
+<p>It is therefore imperative to understand and get a feel for indentation.</p>
+<p>For more information, see <a href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch10s03.html">Lutz 2019, “A Tale of Two Ifs.”</a></p>
 </section>
 <section id="conditions" class="level2">
 <h2 class="anchored" data-anchor-id="conditions">Conditions</h2>
@@ -725,6 +711,9 @@ and functional blocks of code in general, most languages use either characters l
 <section id="elif" class="level3">
 <h3 class="anchored" data-anchor-id="elif"><code>elif</code></h3>
 <p><code>elif</code> is reached when the previous statements are not.</p>
+<p>Note that these are disjoint — if one succeeds, those<br>
+that follow are not processed.</p>
+<p>This is unlike a series of <code>if</code> statements.</p>
 <div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>val <span class="op">=</span> <span class="op">-</span><span class="dv">2</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -767,7 +756,7 @@ and functional blocks of code in general, most languages use either characters l
 <pre><code>odd</code></pre>
 </div>
 </div>
-<p>Notice <code>==</code> for checking the condition x % 2 == 1.</p>
+<p>Notice <code>==</code> for checking the condition <code>x % 2 == 1</code>.</p>
 <p>both <code>if</code> and <code>else</code> are required. This breaks:</p>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'odd'</span>) <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -780,32 +769,31 @@ and functional blocks of code in general, most languages use either characters l
 <h3 class="anchored" data-anchor-id="using-multiple-conditions">Using multiple conditions</h3>
 <p>If statements can be complex combinations of expressions.</p>
 <p>Use parentheses carefully, to keep order of operations correct.</p>
+<p><strong>Correct:</strong></p>
 <div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">## correct</span></span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>val <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>val <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">-</span><span class="dv">2</span> <span class="op">&lt;</span> val <span class="op">&lt;</span> <span class="dv">2</span>) <span class="kw">or</span> (val <span class="op">&gt;</span> <span class="dv">10</span>):</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 1'</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">-</span><span class="dv">2</span> <span class="op">&lt;</span> val <span class="op">&lt;</span> <span class="dv">2</span>) <span class="kw">or</span> (val <span class="op">&gt;</span> <span class="dv">10</span>):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 1'</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>bucket 2</code></pre>
 </div>
 </div>
+<p><strong>Incorrect:</strong></p>
 <div class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">## incorrect - misplaced parenthesis</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">-</span><span class="dv">2</span> <span class="op">&lt;</span> val) <span class="op">&lt;</span> <span class="dv">2</span> <span class="kw">or</span> val <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 1'</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">-</span><span class="dv">2</span> <span class="op">&lt;</span> val) <span class="op">&lt;</span> <span class="dv">2</span> <span class="kw">or</span> val <span class="op">&gt;</span> <span class="dv">10</span>:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 1'</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'bucket 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>bucket 1</code></pre>
 </div>
 </div>
-<p>and this is because True &lt; 2, as True is cast to integer value 1</p>
-<p>this is not the desired result…but does it make sense?</p>
+<p>The problem is the misplaced parenthesis.</p>
+<p>This is because the condition line is interpreted as<code>True &lt; 2</code>,<br>
+where <code>True</code> is cast to integer value <span class="math inline">\(1\)</span>.</p>
 </section>
 </section>
 <section id="loops" class="level2">
@@ -913,7 +901,7 @@ la</code></pre>
 <section id="while-vs-for" class="level2">
 <h2 class="anchored" data-anchor-id="while-vs-for"><code>while</code> vs <code>for</code></h2>
 <p>For loops are used to loop through a list of values or an operation in which the number of iterations is <strong>known</strong> in advance.</p>
-<p>While loops are when <strong>you don’t know</strong> how many interations it will take – you are depending on some condition to be met.</p>
+<p>While loops are when <strong>you don’t know</strong> how many interations it will take — you are depending on some condition to be met.</p>
 <p>It is possible for while loops to be unending, for example:</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="dv">1</span>:</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"This is so annoying"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
