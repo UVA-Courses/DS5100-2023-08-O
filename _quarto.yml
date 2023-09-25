@@ -10,7 +10,7 @@ book:
   title: "{{< var course_num >}}: {{< var course_title >}} | {{< var academic_term >}} | {{< var cohort_type >}}"
   author: "Rafael C. Alvarado"
   date: "08/09/2023"
-  reader-mode: false
+  # reader-mode: false
   page-navigation: true
   repo-actions: [edit]
   # downloads: [pdf]
@@ -120,7 +120,7 @@ book:
     #     - topics/refreshing-the-course-repo.qmd
   
   sidebar:
-    # style: docked
+    style: docked
     # style: floating
     background: light
     collapse-level: 1
