@@ -30,6 +30,9 @@ book:
         - topics/git-and-github.qmd
         - modules/m01/m01-using-rivanna.qmd
         - modules/m01/m01-activity-github.qmd
+      appendices:
+        - topics/oreilly-accounts.qmd
+        - topics/refreshing-the-course-repo.qmd
     - part: modules/m02/m02-intro.qmd # "02 Introducing Python"
       chapters:
         - topics/on-data.qmd
@@ -110,10 +113,10 @@ book:
         - topics/agile-dev.qmd
         - topics/user-stories.qmd
         # - modules/m13/m13-activity.qmd
-    - part: "Appendices"
-      chapters: 
-        - topics/oreilly-accounts.qmd
-        - topics/refreshing-the-course-repo.qmd
+    # - part: "Appendices"
+    #   chapters: 
+    #     - topics/oreilly-accounts.qmd
+    #     - topics/refreshing-the-course-repo.qmd
   
   sidebar:
     style: docked
