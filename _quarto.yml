@@ -125,7 +125,6 @@ book:
     background: light
     collapse-level: 1
     subtitle: Fall 2024
-    reader-mode: false
 
 # comments:
 #   hypothesis: true
