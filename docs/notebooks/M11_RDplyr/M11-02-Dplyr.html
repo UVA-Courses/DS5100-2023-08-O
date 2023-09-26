@@ -588,6 +588,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">Appendices</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/oreilly-accounts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Setting Up O’Reilly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/refreshing-the-course-repo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Refreshing the Course Repo</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -8296,8 +8316,8 @@ Using the first match ...</code></pre>
 <p>The <code>group_by()</code> function is used to generate <strong>summary or aggregate statistics</strong> from a data frame.</p>
 <p>For example, in this air pollution dataset, you might want to know the <strong>average annual level of PM2.5</strong>.</p>
 <p>So <strong>the stratum is the year</strong>, which we can derive from the <code>date</code> variable.</p>
-<p><strong>In conjunction with the <code>group_by()</code> function we often use the <code>summarize()</code> function.</strong> &gt; Or <code>summarise()</code> for some parts of the world.</p>
-<p>The general operation here is a combination of <strong>splitting</strong> a tabel into separate pieces defined by a variable or group of variables (<code>group_by()</code>), and then <strong>applying</strong> a summary function across those subsets (<code>summarize()</code>), then <strong>combining</strong> back into another table.</p>
+<p><strong>In conjunction with the <code>group_by()</code> function we often use the <code>summarize()</code> function.</strong></p>
+<p>The general operation here is a combination of <strong>splitting</strong> a table into separate pieces defined by a variable or group of variables (<code>group_by()</code>), and then <strong>applying</strong> a summary function across those subsets (<code>summarize()</code>), then <strong>combining</strong> back into another table.</p>
 <blockquote class="blockquote">
 <p>This pattern is called <strong>split, apply, and combine</strong>. It is a fundamental pattern in data processing.</p>
 </blockquote>
@@ -8323,7 +8343,7 @@ Using the first match ...</code></pre>
 6 1987</code></pre>
 </div>
 </div>
-<p>Now we can create a that computes summary statistics for each year in the data frame with the <code>summarize()</code> function.</p>
+<p>Now we can compute summary statistics for each year in the data frame with the <code>summarize()</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>years <span class="ot">&lt;-</span> chicago <span class="sc">%&gt;%</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span></span>
@@ -8345,7 +8365,7 @@ Using the first match ...</code></pre>
 </div>
 <p>Note in the process, we implicitly created separate data frame that splits the original data frame by year, which is then passed to <code>summarize()</code>.</p>
 <p><code>summarize()</code> then returns a data frame with columns for <code>year</code> and the annual averages of <code>pm25</code>, <code>o3</code>, and <code>no2</code>.</p>
-<p>In a slightly more complicated example, we might want to know what are the average levels of ozone (<code>o3</code>) and nitrogen dioxide (<code>no2</code>) within quintiles of <code>pm25</code>.</p>
+<p>In a slightly more complicated example, we might want to know what are the average levels of ozone (<code>o3</code>) and nitrogen dioxide (<code>no2</code>) within quantiles of <code>pm25</code>.</p>
 <p>A slicker way to do this would be through a regression model, but we can actually do this quickly with <code>group_by()</code> and <code>summarize()</code>.</p>
 <p>First, we can create a categorical variable of <code>pm25</code> divided into quantiles.</p>
 <div class="cell">

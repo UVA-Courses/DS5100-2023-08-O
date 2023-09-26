@@ -588,6 +588,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">Appendices</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/oreilly-accounts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Setting Up O’Reilly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../topics/refreshing-the-course-repo.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Refreshing the Course Repo</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -685,8 +705,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="learning-goal">Learning Goal</h2>
 <p>You will be introduced into how and why to use <strong>visualizations</strong> in DS 6001.</p>
 <ul>
-<li><p>Visualizations in EDA</p></li>
-<li><p>Visualization in creating data products that communicate results, such as scientific publications, infographics, and interactive visualizations.</p></li>
+<li><p>Visualizations in EDA.</p></li>
+<li><p>Visualization in creating data products that <strong>communicate</strong> results, such as scientific publications, infographics, and interactive visualizations.</p></li>
 </ul>
 <p>These things come at the end of the data science <strong>pipeline</strong>.</p>
 <p>Today, I just want to introduce you to the thinking and <strong>design logic</strong> behind the package, so you can be confident in learning more as you need to.</p>
@@ -732,10 +752,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You can see how the latter are properties of the former.</p>
 <p>Also note that aesthetics make use of visual channels to signify</p>
 <ul>
-<li><p>Size can means greater than, which is good for numeric scale but not categories</p></li>
+<li><p>Size can mean greater than, which is good for numeric scale but not categories</p></li>
 <li><p>Color can signify things like value, e.g.&nbsp;via <code>red : dangerous : : green : safe</code>.</p></li>
 </ul>
-<p>These are the primary layers. The other layers apply <strong>downstream modifications</strong> that add more <strong>information</strong> and <strong>style</strong> to the graph.</p>
+<p>These are the primary layers.</p>
+<p>The other layers apply <strong>downstream modifications</strong> that add more <strong>information</strong> and <strong>style</strong> to the graph.</p>
 </section>
 <section id="the-bare-minimum" class="level2">
 <h2 class="anchored" data-anchor-id="the-bare-minimum">The Bare Minimum</h2>
@@ -745,7 +766,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
 ✔ ggplot2 3.3.5     ✔ purrr   1.0.1
-✔ tibble  3.2.1     ✔ dplyr   1.1.1
+✔ tibble  3.2.1     ✔ dplyr   1.1.2
 ✔ tidyr   1.2.1     ✔ stringr 1.5.0
 ✔ readr   2.1.3     ✔ forcats 1.0.0
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -999,7 +1020,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="adjust-x-and-y-axis-limits">Adjust X and Y axis limits</h2>
 <p>Method 1: Zoom in</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>gg3 <span class="sc">+</span> <span class="fu">coord_cartesian</span>(<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5000</span>)) <span class="sc">+</span> <span class="fu">geom_smooth</span>()  <span class="co"># zoom in</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>gg3 <span class="sc">+</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_cartesian</span>(<span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5000</span>)) <span class="sc">+</span> </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>()  <span class="co"># zoom in</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'</code></pre>
 </div>

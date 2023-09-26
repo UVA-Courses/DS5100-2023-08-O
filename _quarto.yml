@@ -3,18 +3,16 @@ project:
   type: book
   output-dir: docs
 
-execute:
-  freeze: true
+# execute:
+#   freeze: true
   
 book:
   title: "{{< var course_num >}}: {{< var course_title >}} | {{< var academic_term >}} | {{< var cohort_type >}}"
   author: "Rafael C. Alvarado"
   date: "08/09/2023"
-  # reader-mode: false
+  reader-mode: false
   page-navigation: true
   repo-actions: [edit]
-  # downloads: [pdf]
-  # repo-url: "{{< var github_url >}}" # DOES NOT WORK
   repo-url: "https://github.com/ontoligent/DS5100-2023-08-O"
   chapters:
     - part: index.qmd 
@@ -114,10 +112,10 @@ book:
         - topics/agile-dev.qmd
         - topics/user-stories.qmd
         # - modules/m13/m13-activity.qmd
-    # - part: "Appendices"
-    #   chapters: 
-    #     - topics/oreilly-accounts.qmd
-    #     - topics/refreshing-the-course-repo.qmd
+    - part: "Appendices"
+      chapters: 
+        - topics/oreilly-accounts.qmd
+        - topics/refreshing-the-course-repo.qmd
   
   sidebar:
     style: docked
