@@ -120,6 +120,7 @@ book:
   
   sidebar:
     style: docked
+    reader-mode: false
     # style: floating
     background: light
     collapse-level: 1
