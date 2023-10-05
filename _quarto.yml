@@ -3,8 +3,8 @@ project:
   type: book
   output-dir: docs
 
-# execute:
-#   freeze: true
+execute:
+  freeze: true
   
 book:
   title: "{{< var course_num >}}: {{< var course_title >}} | {{< var academic_term >}} | {{< var cohort_type >}}"
