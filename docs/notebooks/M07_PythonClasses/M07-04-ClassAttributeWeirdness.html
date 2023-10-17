@@ -738,7 +738,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.bar.append(<span class="dv">1</span>)  </span>
 <span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> replace_bar(<span class="va">self</span>, new_list <span class="op">=</span> []):</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">"A method to redefined the class list attribute."</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">"A method to redefine the class list attribute."</span></span>
 <span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.bar <span class="op">=</span> new_list </span>
 <span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> compare_states(<span class="va">self</span>):</span>
@@ -853,7 +853,7 @@ c.bar = [1, 1]</code></pre>
 </div>
 </div>
 <p>The new instance has the original value of <code>foo</code>.</p>
-<p>However, notice it starts of with the modified value of <code>bar</code> before it was replaced.</p>
+<p>However, notice it starts off with the modified value of <code>bar</code> before it was replaced.</p>
 <p>We do it a few more times to drive the point home.</p>
 <div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
