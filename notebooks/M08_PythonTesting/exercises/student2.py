@@ -16,4 +16,4 @@ class Student:
             self.courses.remove(course_name)
             self.num_courses -= 1 # decrememt the number of courses
         else:
-            print("Student was not enrolled in that course")
+            print("Student was not enrolled in that course.")

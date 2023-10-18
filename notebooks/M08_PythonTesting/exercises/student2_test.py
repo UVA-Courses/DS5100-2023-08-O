@@ -4,20 +4,14 @@ import unittest
 class EnrollInTestCase(unittest.TestCase): 
     
     def test_01_is_numCoursincremented_correctly(self):
-
-        # Create student instance, adding some courses
         student1 = Student('Katherine', ['DS 5100'])
         student1.enroll_in_course("CS 5050")
-        student1.enroll_in_course("CS 5777")
-        print(student1.courses)
-        print(student1.num_courses)
-        
-        # Test
+        student1.enroll_in_course("CS 5777")        
         expected = 3
-        # unittest.TestCase brings in the assertEqual() method
-        self.assertEqual(student1.num_courses, expected)
+        actual = student1.num_courses
+        self.assertEqual(actual, expected)
         
-    def test_02_is_course_added(self):
+    def test_02_is_course_removed(self):
         student1 = Student('Katherine', ['DS 5100'])
         course = "CS 5050"
         student1.enroll_in_course(course)
