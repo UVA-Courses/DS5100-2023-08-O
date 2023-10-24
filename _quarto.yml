@@ -16,12 +16,6 @@ book:
   repo-url: "https://github.com/ontoligent/DS5100-2023-08-O"
   chapters:
     - index.qmd 
-    # - part: index.qmd 
-      # chapters:
-        # - modules/m00/syllabus.qmd
-        # - modules/m00/schedule.qmd
-        # - notebooks/M00_FinalProject/FinalProjectInstructions.qmd
-        # - notebooks/M00_FinalProject/FinalProjectTemplate.ipynb
     - part: modules/m01/m01-intro.qmd # "01 Getting Started"
       chapters:
         - topics/rivanna.qmd
@@ -85,7 +79,6 @@ book:
         - modules/m08/m08-testing-and-verification.qmd
         - notebooks/M08_PythonTesting/M08-01-ExceptionHandling.ipynb 
         - notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.ipynb
-        # - notebooks/M08_PythonTesting/M08-02-script1.py
     - part: modules/m09/m09-intro.qmd # "09 Modules"
       chapters: 
         - notebooks/M09_PythonModules/M09-01-PackagesIntro.ipynb
