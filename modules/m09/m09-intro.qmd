@@ -9,7 +9,9 @@
 
 ### Required
 
-<ul>
-<li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/part05.html">Lutz 2017, Part V. Modules and Packages</a><span>&nbsp;</span>&rarr; Up to Ch. 24.</li>
-<li><a target="_new" href="https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html">Python Package Tutorial (Read The Docs)</a></li>
-</ul>
+* [Lutz 2017, Part V. Modules and Packages &rarr; Up to Ch. 24.](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/part05.html)
+* [Python Package Tutorial](https://python-packaging.readthedocs.io/en/latest/minimal.html)
+
+### Optional 
+
+* [Python Docs](https://packaging.python.org/en/latest/tutorials/packaging-projects/)

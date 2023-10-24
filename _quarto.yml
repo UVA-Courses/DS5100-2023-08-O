@@ -10,18 +10,12 @@ book:
   title: "{{< var course_num >}}: {{< var course_title >}} | {{< var academic_term >}} | {{< var cohort_type >}}"
   author: "Rafael C. Alvarado"
   date: "08/09/2023"
+  reader-mode: false
   page-navigation: true
   repo-actions: [edit]
-  # downloads: [pdf]
-  # repo-url: "{{< var github_url >}}" # DOES NOT WORK
   repo-url: "https://github.com/ontoligent/DS5100-2023-08-O"
   chapters:
-    - part: index.qmd 
-      chapters:
-        - modules/m00/syllabus.qmd
-        - modules/m00/schedule.qmd
-        # - notebooks/M00_FinalProject/FinalProjectInstructions.qmd
-        # - notebooks/M00_FinalProject/FinalProjectTemplate.ipynb
+    - index.qmd 
     - part: modules/m01/m01-intro.qmd # "01 Getting Started"
       chapters:
         - topics/rivanna.qmd
@@ -30,6 +24,9 @@ book:
         - topics/git-and-github.qmd
         - modules/m01/m01-using-rivanna.qmd
         - modules/m01/m01-activity-github.qmd
+      appendices:
+        - topics/oreilly-accounts.qmd
+        - topics/refreshing-the-course-repo.qmd
     - part: modules/m02/m02-intro.qmd # "02 Introducing Python"
       chapters:
         - topics/on-data.qmd
@@ -41,6 +38,7 @@ book:
         - notebooks/M02_BasicPython/M02-03-Booleans.ipynb
         - notebooks/M02_BasicPython/M02-04-Strings.ipynb
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
+        - notebooks/M02_BasicPython/M02-Notes.ipynb
     - part: modules/m03/m03-intro.qmd # "03 Control Structures"
       chapters:
         - topics/vals-vars-expressions-statements.qmd
@@ -74,13 +72,13 @@ book:
         - notebooks/M07_PythonClasses/M07-01-Classes.ipynb
         - notebooks/M07_PythonClasses/M07-02-ClassesExample.ipynb
         - notebooks/M07_PythonClasses/M07-03-MoreOnClasses.ipynb
+        - notebooks/M07_PythonClasses/M07-05-Example.ipynb
         - notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.ipynb
     - part: modules/m08/m08-intro.qmd # "08 Testing"
       chapters: 
         - modules/m08/m08-testing-and-verification.qmd
         - notebooks/M08_PythonTesting/M08-01-ExceptionHandling.ipynb 
         - notebooks/M08_PythonTesting/M08-02-PythonUnitTesting.ipynb
-        - notebooks/M08_PythonTesting/M08-02-script1.py
     - part: modules/m09/m09-intro.qmd # "09 Modules"
       chapters: 
         - notebooks/M09_PythonModules/M09-01-PackagesIntro.ipynb
@@ -116,10 +114,11 @@ book:
   
   sidebar:
     style: docked
+    reader-mode: false
     # style: floating
     background: light
     collapse-level: 1
-    subtitle: Summer 2023
+    subtitle: Fall 2024
 
 # comments:
 #   hypothesis: true
@@ -132,6 +131,7 @@ format:
     fig-cap-location: bottom
     link-external-icon: true
     link-external-newwindow: true
+    reader-mode: false
   # pdf:
   #   documentclass: scrreport    
 
